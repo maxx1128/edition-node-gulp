@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+.p-footer {
+  padding-top: spacing();
+  
+  color: color(mono, light);
+
+  background: color(primary, dark);
+
+  a { color: color(mono, light); }
+}
+
+.p-footer__container {
+  @include row-container();
+}
+
+.p-footer__links {
+  @include col-container();
+  @include syn(base, 12, 0, (marg-b-2));
+  @include syn(small, 7, 0, (inline-b marg-b-0));
+}
+
+.p-footer__copyright {
+  @include col-container();
+  @include syn(base, 12, 0, (''));
+  @include syn(small, 5, 0, (inline-b float-r align-r));
+}

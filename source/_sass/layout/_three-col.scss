@@ -1,0 +1,10 @@
+// Layout classes for pages with a sidebar
+// .sidebar-layout__main for the content
+// .sidebar-layout__sidebar for the sidebar
+
+.l-three-col { @include row-container(); }
+
+.l-three-col__item {
+  @include col-container();
+  @include syn(medium, 4, 0, (inline-b float-l));
+}

@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+form {
+  & > div { margin-bottom: spacing(); }
+
+  ul,
+  ol {
+    list-style: none;
+    margin-left: 0;
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+}
+
+.form__container { margin-bottom: spacing(); }
+
+.form__legend { margin-bottom: spacing(half); }
+
+@include bem-mods(form__label) {
+  display: block;
+  padding-bottom: spacing(half);
+}
+
+@include bem-mods(form__input) {
+  width: 100%;
+  margin: 0;
+  padding: spacing(half);
+
+  font-size: 100%;
+  font-family: inherit;
+
+  border: container(border);
+}
+
+
+.form__label--checkbox,
+.form__label--radio {
+  padding-bottom: 0;
+}
+
+.form__input--checkbox,
+.form__input--radio {
+  width: auto;
+  margin-right: spacing(half);
+}

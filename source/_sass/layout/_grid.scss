@@ -1,0 +1,65 @@
+$layout-example-height: 200px;
+
+
+// Config for Synapse using global variables
+$synapse: (
+  columns: 12,
+  layouts: (
+        base:  0,
+        small:  breakpoint('small'),
+        medium:  breakpoint('medium'),
+        large: breakpoint('large')
+    ),
+  spaceUnits: (
+    spacing(half),
+    spacing(),
+    spacing(double),
+    spacing(double)
+  )
+);
+
+/*
+// If custom Synapse utilities are needed, use this mixin
+
+@mixin synapse-custom($var) {
+  @if ($var == 'margin-auto') {
+    margin: 0 auto;
+  }
+}
+
+*/
+
+// For custom layouts, apply this to the row holding all the columns
+@mixin row-container($padding: spacing()) {
+  @include clearfix();
+  max-width: size(max-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: $padding;
+}
+
+// For custom layouts, apply this to the all the columns
+@mixin col-container() {
+  @include row-container(0 spacing());
+}
+
+// For any elements in their own row that still need a max width and proper alignment, use this
+// Make sure it has twice the padding as the above col mixin
+.l-col__single {
+  @include row-container(spacing() spacing(double));
+}
+
+.__col-example {
+  height: $layout-example-height;
+  padding-top: ($layout-example-height * .2) !important;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background-color: color(info);
+
+  &:nth-of-type(even) {
+    background-color: color(info, light);
+  }
+}
+

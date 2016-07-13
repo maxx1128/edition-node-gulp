@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+.c-nav {
+  clear: both;
+  overflow: hidden;
+
+  a {
+    display: block;
+    padding: spacing();
+    border-bottom: container(border);
+  }
+}
+
+.c-nav__menu,
+.c-nav__menu-item {
+  margin: 0;
+
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.c-nav__menu { float: right; }
+
+.c-nav__menu-item {
+  float: left;
+
+  &:last-of-type a { padding-right: 0; }
+
+  a { border-bottom: none; }
+}
+

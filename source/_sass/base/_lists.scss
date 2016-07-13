@@ -1,0 +1,35 @@
+ol,
+ul {
+  @include margin(null null spacing() spacing(double));
+  padding: 0;
+
+  line-height: type(line-height, h6);
+  font-size: type(font-size, p);
+
+  ol,
+  ul {
+    @include margin(spacing(half) null 0 null);
+    margin-bottom: 0;
+  }
+
+  li { margin-bottom: spacing(half); }
+}
+
+/* Definition Lists */
+dl {
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+
+dt,
+dd {
+  margin-bottom: spacing(half);
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: spacing();
+}

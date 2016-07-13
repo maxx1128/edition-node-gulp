@@ -1,0 +1,17 @@
+.c-breadcrumbs {
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: spacing() 0;
+
+    &:not(:first-of-type) {
+
+      &:before {
+        content: '/';
+        margin: 0 0.75em;
+        top: 1px;
+      }   
+    }
+  }
+}

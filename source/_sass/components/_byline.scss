@@ -1,0 +1,6 @@
+.c-byline {
+  @include margin(spacing() null);
+
+  font-size: type(font-size, small);
+  font-style: italic;
+}

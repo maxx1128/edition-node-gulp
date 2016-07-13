@@ -1,0 +1,35 @@
+{
+  "container-elements": [
+    { 
+      "property": "border",
+      "values": [
+        { "name": "base" },
+        { "name": "dark" }
+      ]
+    }, { 
+      "property": "border-radius",
+      "values": [
+        { "name": "base" },
+        { "name": "large" }
+      ]
+    }, { 
+      "property": "box-shadow",
+      "values": [
+        { "name": "base" }
+      ]
+    }, { 
+      "property": "background-color",
+      "values": [
+        { "name": "base" },
+        { "name": "dark" }
+      ]
+    }, { 
+      "property": "padding",
+      "values": [
+        { "name": "base" },
+        { "name": "half" },
+        { "name": "large" }
+      ]
+    }
+  ]
+}

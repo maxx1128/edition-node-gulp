@@ -1,0 +1,12 @@
+/* Search Form */
+.search-field { padding-right: spacing(double); }
+
+.inline-form .search-submit {
+  background: none;
+  padding: spacing();
+
+  color: color(mono);
+
+  border: 0;
+  border-left: container(border);
+}

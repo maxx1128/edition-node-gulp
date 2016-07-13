@@ -1,0 +1,33 @@
+$social-share-bg: color(secondary, dark);
+$social-share-bg-hover: color(secondary, dark);
+
+.c-social-share {
+  overflow: hidden;
+  margin: 0 0 spacing() 0;
+
+  list-style-type: none;
+}
+
+.c-social-share__item {
+  display: inline-block;
+  margin-right: spacing(half);
+
+  a {
+    @include transition(anim(time));
+    display: block;
+    padding: spacing(half) spacing();
+
+    color: color(mono, light);
+
+    border-radius: container(border-radius);
+    background: $social-share-bg;
+
+    @include hovers() {
+      @include transition(anim(time));
+      text-decoration: none;
+
+      background: $social-share-bg-hover;
+    }
+  }
+}
+

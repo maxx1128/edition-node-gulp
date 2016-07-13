@@ -1,0 +1,15 @@
+<div class="b-swatches"> 
+  {{#color-schemes}}
+  <div class="b-swatch--{{scheme}}">
+  	
+  	<div class="b-swatch__base"></div>
+
+  	<div class="b-swatch__all-tones">
+  		{{#color-tones}}
+  			<div class="b-swatch__tone _tone-{{tone}}"></div>
+  		{{/color-tones}}
+  	</div>
+
+  </div>
+  {{/color-schemes}}
+</div>

@@ -3,6 +3,11 @@
  * styles for grids, animations, color swatches, etc.
  * These styles will not be your production CSS.
  */
+
+.sg-header {
+  display: none;
+}
+
 #sg-patterns {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;

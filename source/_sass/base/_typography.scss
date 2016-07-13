@@ -1,0 +1,64 @@
+$type-elements: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'small', 'tiny';
+$type-properties: 'font-size', 'line-height', 'margin';
+
+@each $type in $type-elements {
+  #{$type} {
+
+    @each $prop in $type-properties {
+      #{$prop}: type($prop, $type);
+    }
+  }
+}
+
+
+
+// Default typography for all elements
+body {
+  font-family: type(font-family, base);
+
+  color: color(mono, dark);
+}
+
+
+// Links
+a {
+  color: color(action);
+  text-decoration: none;
+  outline: 0;
+
+  @include hovers() {
+    color: color(action, dark);
+    text-decoration: underline;
+  }
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: type(font-family, header); }
+
+// Subheadings
+.subheading {
+  font-family: type(font-family, base);
+  font-weight: type(font-weight, bold);
+}
+
+// Horizontal Rule
+hr {
+  border: 0;
+  height: 2px;
+  margin: spacing(double) 0;
+
+  background: color(primary, light);
+}
+
+abbr {
+  border-bottom: container(border);
+  cursor: help;
+}
+
+mark { background-color: color(warning); }
+

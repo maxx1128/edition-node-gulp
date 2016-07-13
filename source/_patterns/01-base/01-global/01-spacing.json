@@ -1,0 +1,7 @@
+{
+  "spacing": [
+    { "distance": "double" },
+    { "distance": "base" },
+    { "distance": "half" }
+  ]
+}

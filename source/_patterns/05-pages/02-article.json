@@ -1,0 +1,94 @@
+{
+	"title" : "Article",
+	"bodyClass": "article",
+	"headline" : {
+		"short" : "Peru votes in election shaped by ex-leader’s legacy"
+	},
+	"author" : {
+		"first-name" : "Julianne",
+		"last-name" : "McCormick"
+	},
+	"img": {
+		"landscape-4x3": {
+			"src": "../../images/sample/landscape-4x3-mountains.jpg",
+			"alt": "Mountains"
+		},
+		"landscape-16x9": {
+			"src": "../../images/sample/landscape-4x3-mountains.jpg",
+			"alt": "Mountains"	
+		}
+	},
+	"inset-blocks" : [
+		{
+			"headline" : "This is the headline for the inset block"
+		}
+	],
+	"latest-block" : [
+		{
+			"headline" : "This is the headline for the latest block"
+		}
+	],
+	"latest-posts" : [
+		{
+			"headline" : {
+				"medium" : "This is a fake related article!"
+			}
+		}, {
+			"headline" : {
+				"medium" : "Hey, this is another fake article title!"
+			}
+		}, {
+			"headline" : {
+				"medium" : "Yep, another related article title here."
+			}
+		},
+		{
+			"headline" : {
+				"medium" : "This article title is bored and wants a pizza"
+			}
+		}, {
+			"headline" : {
+				"medium" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+			}
+		}
+	],
+
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit fuga est ullam animi eos nobis fugit aspernatur maiores, error iusto dolorum cupiditate ab, laboriosam distinctio incidunt autem itaque harum qui.",
+
+	"blockquote": "'Peru is on the threshold of becoming a narco-state,' he told supporters at his closing campaign rally in Lima.",
+
+	"articleText1": [
+    {
+      "text": "In a tight presidential runoff election Sunday, Peruvians seemed equally divided between two very different candidates: the daughter of imprisoned ex-president Alberto Fujimori, and her older opponent, former World Bank economist Pedro Pablo Kuczynski."
+    }, {
+      "text": "Two exit polls on Sunday suggested that the 77-year-old Kuczynski would narrowly defeat Keiko Fujimori, though a third poll gave Fujimori a narrow lead, the Associated Press reported."
+    }, {
+      "text": "The vote was seen largely as a referendum on the legacy of Alberto Fujimori, an iron-handed ruler who led the nation for a decade in the 1990s. He is serving a 25-year sentence for corruption, among other charges."
+    }, {
+      "text": "Keiko Fujimori, 41, originally seemed headed to easy victory: she won the first round of voting by a 20 percentage-point margin, but by Sunday, her wide lead over Kuczynski had disappeared."
+    }, {
+      "text": "In a quick count of 84.5% of sample ballots, pollster Ipsos-Apoyo said Kuczynski won 50.9% of votes, with Fujimori winning 49.1%, Reuters reported."
+    }, {
+      "text": "Another local pollster, Gfk, which was the most accurate in predicting results from the first round, showed Kuczynski winning by more than two percentage points, while a third poll by CPI showed Fujimori winning by three points."
+    }
+  ],
+
+
+  "articleText2": [
+    {
+      "text": "Official results aren't expected until after 10 p.m. ET."
+    }, {
+      "text": "As exit polls demonstrated the tight race, a jubilant Fujimori waved to supporters from a hotel terrace in Lima. Meanwhile, Kuczynski's campaign aides filed into his home to await official results, flashing \"V' for victory\" signs."
+    }, {
+    	"text": "A potential swing vote in a close race could be the 885,000 Peruvians eligible to vote abroad — about 3.8% of the electorate, AP reported."
+    }, {
+    	"text": "Kuczynski, known widely as \"PPK,\" supported Fujimori in a 2011 presidential runoff, won by outgoing President Ollanta Humala. But he has campaigned aggressively against his younger opponent, telling supporters at a rally last week in Lima, \"Peru is on the threshold of becoming a narco-state.\""
+    }, {
+    	"text": "The reference wasn’t just to the elder Fujimori’s well-known ties to corruption, organized crime and death squads, but an attempt to draw attention to a string of scandals that have hobbled the younger Fujimori in the final stretch — most notably a report that one of her big fundraisers and the secretary general of her party is the target of a U.S. Drug Enforcement Administration investigation, AP reported."
+    }, {
+    	"text": "Peru is the world’s largest producer of cocaine."
+    }, {
+    	"text": "Kuczynski benefited from a last-minute endorsement by the third-place finisher in the first round of voting, leftist congresswoman Veronika Mendoza, the protagonist of a massive anti-Fujimori demonstration this week."
+    }
+  ]
+}

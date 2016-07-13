@@ -1,0 +1,63 @@
+// This is the function to pull colors out. It's here instead of on the functions sheet so the below color values can be set.
+@function color($color, $tone: 'base') {
+  @if map-has-key($color-map, $color) {
+    @return map-get(map-get($color-map, $color), $tone);
+  }
+}
+
+// For pulling any breakpoint size values
+@function size($bp) {
+  @if map-has-key($breakpoint-map, $bp) {
+    @return map-get($breakpoint-map, $bp);
+  }
+}
+
+// For pulling any typography values
+// No base is set so it always needs two values
+@function type($type-var, $val: 'base') {
+  @if map-has-key($typography-map, $type-var) {
+    @return map-get(map-get($typography-map, $type-var), $val);
+  }
+}
+
+// For getting container-specific styles
+@function container($style, $type: 'base') {
+  @if map-has-key($containers-map, $style) {
+    @return map-get(map-get($containers-map, $style), $type);
+  }
+}
+
+// For getting values related to animations
+@function anim($anim, $type: 'base') {
+  @if map-has-key($animations-map, $anim) {
+    @return map-get(map-get($animations-map, $anim), $type);
+  }
+}
+
+
+
+
+
+// For pulling specific breakpoint width values out.
+// Not for adding breakpoint styles.
+@function breakpoint($width) {
+  @if map-has-key($breakpoint-map, $width) {
+    @return map-get($breakpoint-map, $width);
+  }
+}
+
+// For pulling specific spacing values
+// Can be used for margins or padding
+@function spacing($space: 'base') {
+  @if map-has-key($spacing-map, $space) {
+    @return map-get($spacing-map, $space);
+  }
+}
+
+// For pulling z-index values
+@function z-index($index: 'base') {
+  @if map-has-key($z-layers, $index) {
+    @return map-get($z-layers, $index);
+  }
+}
+

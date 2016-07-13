@@ -1,0 +1,40 @@
+
+/* Completely remove from the flow and screen readers. */
+.h-is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+/* Floats */
+.h-right { float: right !important; }
+.h-left { float: left !important; }
+.h-clear { @include clearfix(); }
+
+/* Text-Align */
+.h-align-right { text-align: right !important; }
+.h-align-center { text-align: center !important; }
+.h-align-left { text-align: left !important; }
+
+
+/* Emphasis Colors */
+.h-valid { color: color(success) !important; }
+.h-error { color: color(alert) !important; }
+.h-warn { color: color(warning) !important; }
+.h-info { color: color(info) !important; }
+
+/* Emphasis Border Colors */
+.h-border-valid { border-color: color(success) !important; }
+.h-border-error { border-color: color(alert) !important; }
+.h-border-warn { border-color: color(warning) !important; }
+.h-border-info { border-color: color(info) !important; }
+
+.h-is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}

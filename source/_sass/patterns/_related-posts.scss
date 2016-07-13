@@ -1,0 +1,16 @@
+.p-related-posts {}
+
+.p-related-posts__title { margin-top: 0; }
+
+// The text-only version of most recent posts
+.p-related-posts__list {
+  @include margin(0 0 spacing() 0);
+  list-style-type: none;
+
+  li {
+    padding: container(padding, half) 0;
+    border-bottom: container(border);
+  }
+
+  &.flush { margin: 0; }
+}

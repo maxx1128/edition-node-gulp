@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $Table
+\*------------------------------------*/
+
+$table-margin: spacing(half);
+$table-cell-spacing: spacing() 0;
+$table-border-bottom: container(border);
+
+$table-header-font-weight: type(font-weight, bold);
+
+table {
+  border-collapse: collapse;
+  font-feature-settings: 'kern', 'liga', 'tnum';
+  margin: $table-margin;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: $table-border-bottom;
+  font-weight: $table-header-font-weight;
+  padding: $table-cell-spacing;
+  text-align: left;
+}
+
+td {
+  border-bottom: $table-border-bottom;
+  padding: $table-cell-spacing;
+}
+
+tr,
+td,
+th { vertical-align: middle; }
+

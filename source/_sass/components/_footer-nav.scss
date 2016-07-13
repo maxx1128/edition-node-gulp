@@ -1,0 +1,17 @@
+.c-footer-nav {
+  margin: 0;
+
+  list-style-type: none;
+
+  li {
+    display: block;
+    padding-bottom: spacing();
+  }
+
+  @include larger-than(medium) {
+    li {
+      display: inline-block;
+      padding-right: spacing(double);
+    }
+  }
+}

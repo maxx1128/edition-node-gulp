@@ -1,0 +1,121 @@
+$btn-bg: color(action);
+$btn-text: color(mono, light);
+$btn-pad: spacing();
+$btn-radius: container(border-radius, large);
+$btn-hover-bg: color(action, dark);
+$btn-hover-text: $btn-text;
+$btn-trans: anim(time);
+
+$btn-alt-bg: color(mono, light);
+$btn-alt-border: 2px solid color(action);
+$btn-alt-text: color(action);
+$btn-alt-hover-bg: color(action);
+$btn-alt-hover-border: $btn-alt-border;
+$btn-alt-hover-text: color(mono, light);
+
+$btn-small-pad: spacing();
+$btn-small-font: type(font-size, tiny);
+$btn-large-pad: spacing();
+$btn-large-font: type(font-size, h5);
+
+$btn-disabled-bg: color(mono);
+$btn-disabled-text: color(mono, light);
+$btn-disabled-opacity: .35;
+
+$btn-colors: (
+  success: (
+    base: color(success),
+    hover: color(success, dark)
+  ),
+  info: (
+    base: color(info),
+    hover: color(info, dark)
+  ),
+  warning: (
+    base: color(warning),
+    hover: color(warning, dark)
+  ),
+  alert: (
+    base: color(alert),
+    hover: color(alert, dark)
+  ),
+);
+
+
+.btn {
+  @include transition(anim(time));
+  display: inline-block;
+  padding: $btn-pad;
+
+  line-height: 1;
+  color: $btn-text;
+  text-align: center;
+
+  border: 0;
+  background: $btn-bg;
+  border-radius: $btn-radius;
+
+  @include hovers() {
+    @include transition($btn-trans);
+
+    color: $btn-hover-text;
+    text-decoration: none;
+
+    background-color: $btn-hover-bg;
+  }
+}
+
+// For creating the different button color classes
+@each $name, $colors in $btn-colors {
+  $base-color: map-get($colors, base);
+  $hover-color: map-get($colors, hover);
+
+  .btn__#{$name} {
+    background-color: $base-color;
+
+    @include hovers() {
+      background-color: $hover-color;
+    }
+  }
+}
+
+.btn__alt {
+  color: $btn-alt-text;
+
+  background-color: $btn-alt-bg;
+  border: $btn-alt-border;
+
+
+  @include hovers {
+    color: $btn-alt-hover-text;
+
+    background-color: $btn-alt-hover-bg;
+    border: $btn-alt-hover-border;
+  }
+}
+
+.btn__small {
+  padding: $btn-small-pad;
+
+  font-size: $btn-small-font;
+}
+
+.btn__large {
+  padding: $btn-large-pad;
+
+  font-size: $btn-large-font;
+}
+
+.btn__disabled {
+  cursor: default;
+  color: $btn-disabled-text;
+
+  background: $btn-disabled-bg;
+  opacity: $btn-disabled-opacity;
+
+  @include hovers {
+    color: $btn-disabled-text;
+
+    background: $btn-disabled-bg;
+  }
+}

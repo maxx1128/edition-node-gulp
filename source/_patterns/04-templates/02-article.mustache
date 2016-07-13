@@ -1,0 +1,31 @@
+<div class="page" id="page">
+	{{> patterns-header }}
+	<div role="main">
+		<div class="l-sidebar">
+			<div class="l-sidebar__main">
+				{{> patterns-article-header }}
+
+					{{# articleText1 }}
+						<p>
+							{{ text }}
+						</p>
+					{{/ articleText1 }}
+
+					{{> base-figure-with-caption }}
+
+					{{# articleText2 }}
+						<p>
+							{{ text }}
+						</p>
+					{{/ articleText2 }}
+				
+				{{> components-social-share }}
+			</div><!--end l-main-->
+
+			<div class="l-sidebar__sidebar">
+				{{> patterns-related-posts }}
+			</div><!--end l-sidebar-->
+		</div><!--end l-two-col-->
+	</div><!--End role=main-->
+	{{> patterns-footer }}
+</div>

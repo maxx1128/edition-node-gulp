@@ -1,0 +1,32 @@
+<div id="container">
+	{{> patterns-header }}
+	<div role="main">
+		
+		<div class="l-col__single">
+			{{# hero }}
+				{{> components-hero-block }}
+			{{/ hero}}
+		</div>
+
+		<div class="l-three-col">
+			{{# touts}}
+				<div class="l-three-col__item">
+					{{> components-inset-block }}
+				</div>
+			{{/ touts}}
+		</div><!--end 3up-->
+
+		<hr />
+
+		<div class="l-sidebar">
+			<div class="l-sidebar__main">
+				{{> patterns-latest-posts }}
+			</div><!--end .l-main-->
+
+			<div class="l-sidebar__sidebar">
+				<h5>Sidebar stuff here!</h5>
+			</div><!--end .l-sidebar-->
+		</div><!--end .l-two-col-->
+	</div><!--End role=main-->
+	{{> patterns-footer }}
+</div>

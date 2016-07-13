@@ -1,0 +1,100 @@
+$swatches-per-row: 3;
+$swatches-tones-per-row: 2;
+
+$swatch-base-height: 120px;
+$swatch-tone-height: 80px;
+
+$swatch-hex-position: null null spacing(half) spacing(half);
+$swatch-shade-position: spacing(half) null null spacing(half);
+
+$swatch-light-text: color(mono, light);
+$swatch-dark-text: color(mono, dark);
+
+$swatch-base__shade-font-size: type(font-size, h5);
+$swatch-base__hex-font-size: type(font-size);
+
+$swatch-tone__shade-font-size: type(font-size, small);
+$swatch-tone__hex-font-size: type(font-size, tiny);
+
+
+// Mixin for generating the common swatch colors
+@mixin swatch__color-scheme-generator($u-color, $shade, $base: false) {
+  @include contra-color($u-color, $swatch-light-text, $swatch-dark-text);
+  position: relative;
+
+  @if ($base == true) {
+    font-size: $swatch-base__shade-font-size;
+    text-transform: uppercase;
+
+    &::after { font-size: $swatch-base__hex-font-size; }
+  } @else {
+    font-size: $swatch-tone__shade-font-size;
+    text-transform: capitalize;
+
+    &::after { font-size: $swatch-tone__hex-font-size; }
+  }
+
+  &::before {
+    @include position(absolute, $swatch-shade-position);
+    content: quote(inspect($shade));
+  }
+
+  &::after {
+    @include position(absolute, $swatch-hex-position);
+    content: quote(inspect($u-color));
+
+    text-transform: uppercase;
+  }
+}
+
+.b-swatches {
+  @include clearfix();
+}
+
+// Base styles for all palettes
+// Mainly the palettes and their layout
+// The BEM mod makes it apply to each modified version
+@include bem-mods(b-swatch) {
+  @include syn(base, 12, 0, (block marg-b-1));
+  @include syn(small, 6, 0, (float-l inline-b border-b pad-sides-1));
+  @include syn(medium, (12 / $swatches-per-row), 0, (''));
+
+  @include clearfix();
+}
+
+
+// The base color for every scheme
+.b-swatch__base {
+  @include size(100% $swatch-base-height);
+}
+
+// Container for both light and dark tones
+.b-swatch__all-tones {
+  @include size(100% $swatch-tone-height);
+  @include clearfix();
+}
+
+// Every light and dark tone of the base color
+.b-swatch__tone {
+  @include size(100%);
+  display: inline-block;
+  margin: 0;
+  float: left;
+
+  @include larger-than(small) {
+    width: percentage(1/$swatches-tones-per-row);
+  }
+}
+
+
+@each $palette, $tones in $color-map {
+  $base-color: map-get($tones, base);
+  
+  .b-swatch--#{$palette} {
+    .b-swatch__base { @include swatch__color-scheme-generator($base-color, $palette, $base: true); }
+    
+    @each $tone-name, $tone-value in $tones {
+      ._tone-#{$tone-name} { @include swatch__color-scheme-generator($tone-value, $tone-name); }
+    }
+  }
+}

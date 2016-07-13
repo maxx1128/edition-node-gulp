@@ -1,0 +1,26 @@
+{
+	"bodyClass": "article",
+  "articleText1": [
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolore ducimus blanditiis, sequi ipsa praesentium voluptatibus deserunt soluta molestias earum repellendus reprehenderit, molestiae debitis repudiandae! Pariatur autem quasi nihil in."
+    }, {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quisquam modi minima, veritatis delectus a tempora cupiditate? Quis iure, neque, cum sapiente aliquam iste illum eius, doloremque eum officiis veritatis."
+    }, {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa ad nisi accusamus cupiditate veniam corrupti consequatur aliquid illum porro magni eius facilis sapiente voluptatem, molestiae atque voluptatibus veritatis similique."
+    }
+  ],
+
+  "articleText2": [
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolore ducimus blanditiis, sequi ipsa praesentium voluptatibus deserunt soluta molestias earum repellendus reprehenderit, molestiae debitis repudiandae! Pariatur autem quasi nihil in."
+    }, {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quisquam modi minima, veritatis delectus a tempora cupiditate? Quis iure, neque, cum sapiente aliquam iste illum eius, doloremque eum officiis veritatis."
+    }, {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa ad nisi accusamus cupiditate veniam corrupti consequatur aliquid illum porro magni eius facilis sapiente voluptatem, molestiae atque voluptatibus veritatis similique."
+    }, {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quisquam modi minima, veritatis delectus a tempora cupiditate? Quis iure, neque, cum sapiente aliquam iste illum eius, doloremque eum officiis veritatis."
+    }, {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa ad nisi accusamus cupiditate veniam corrupti consequatur aliquid illum porro magni eius facilis sapiente voluptatem, molestiae atque voluptatibus veritatis similique."
+    }
+  ]
+}

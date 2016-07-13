@@ -1,0 +1,99 @@
+/* 
+
+1) Thumbnail Block - Small image, headline, paragraph
+3) Inset block - Smaller image, text always overlayed on bottom
+
+ */
+
+// Any universal block styles for all variations
+@include bem-mods(c-block) {
+  overflow: hidden;
+  margin-bottom: spacing(double);
+}
+
+.c-block__text {
+  @include syn(base, 0, 0, (align-c));
+  @include syn(small, 0, 0, (align-l));
+}
+
+.c-block__headline {
+
+  @include larger-than(small) { margin-top: 0; }
+}
+
+/*
+
+@element '.c-block__headline' and (min-lines: 2) {
+  eq_this {
+    text-align: center;
+  }
+
+  eq_parent.c-block__text {
+    padding: spacing(double) spacing(half);
+    top: 0;
+  }
+}
+
+*/
+
+
+
+
+.c-block__excerpt {
+  margin-bottom: 0;
+
+  color: color(mono, dark);
+}
+
+
+
+
+
+// Block Thumbnail with Headline
+.c-block--thumb {
+
+  .c-block__thumb {
+    @include syn(small, 5, 0, (float-l));
+    @include syn(medium, 4, 0, (''));
+    @include syn(medium, 3, 0, (''));
+  }
+
+  .c-block__text {
+    @include syn(small, 7, 0, (border-b pad-sides-2 float-r));
+    @include syn(medium, 8, 0, (''));
+    @include syn(medium, 9, 0, (''));
+  }
+}
+
+
+// Inset and Hero Block
+.c-block--hero,
+.c-block--inset {
+  position: relative;
+
+  .c-block__thumb {
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .c-block__headline { margin: 0; }
+
+  .c-block__text {
+    @include position(absolute, null null 0 0);
+    width: 100%;
+    padding: spacing(double) spacing();
+
+    color: color(mono, light);
+
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Hero Block specific styles
+.c-block--hero {
+
+  .c-block__text { padding: spacing(double) spacing(); }
+}

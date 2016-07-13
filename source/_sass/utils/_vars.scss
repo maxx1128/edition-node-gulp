@@ -1,0 +1,219 @@
+/*
+
+These are all Sass maps that set the global variables used throughout the site
+
+Rules:
+1) No styles for elements can be declared here
+2) Any variables not in maps must be prefixed with 'g-', and not be used on ANY other stylesheet. Please keep their names as short as possible
+3) No map can reference a value in another map, only 'g-' vars if needed
+4) Always use these variables on their own. Never use them in operations to output different values, like dividing one in half. Always add this value to the map instead.
+
+*/
+
+
+// ----- Grid Variables ----- //
+
+$breakpoint-map: (
+  small: em(480px),
+  medium: em(787px),
+  large: em(900px),
+  max-width: em(1200px)
+);
+
+
+
+// ----- Layout Variables ----- //
+
+// Lays out the different z-index values to help keep them organized. Based off what commom elements they'd be used for.
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);
+
+$g-base-spacing: em(16px);
+
+// Spacing units for padding, margin, etc
+$spacing-map: (
+  double: decimal-round(($g-base-spacing * 2), 2),
+
+  base: decimal-round($g-base-spacing, 2),
+
+  half: decimal-round(($g-base-spacing / 2), 2)
+);
+
+
+
+// ----- Color Variables ----- //
+
+// Eeveelutions Palette
+$g-primary-color: #d59c4a;
+$g-secondary-color: #a4624a;
+$g-action-color: #c52052;
+$g-mono-color: #62627b;
+$g-info-color: #5ac5e6;
+$g-success-color: #319c73;
+$g-warning-color: #ffde52;
+$g-alert-color: #d54152;
+
+$g-shade-1: 25%;
+
+
+// Map for storing all color variables
+$color-map: (
+  primary: (
+    light: tint($g-primary-color, $g-shade-1),
+    base: $g-primary-color,
+    dark: shade($g-primary-color, $g-shade-1)
+  ),
+
+  secondary: (
+    light: tint($g-secondary-color, $g-shade-1),
+    base: $g-secondary-color,
+    dark: shade($g-secondary-color, $g-shade-1)
+  ),
+
+  action: (
+    light: tint($g-action-color, $g-shade-1),
+    base: $g-action-color,
+    dark: shade($g-action-color, $g-shade-1)
+  ),
+
+  mono: (
+    light: #fffefc,
+    base: $g-mono-color,
+    dark: #111
+  ),
+
+  info: (
+    light: tint($g-info-color, $g-shade-1),
+    base: $g-info-color,
+    dark: shade($g-info-color, $g-shade-1)
+  ),
+
+  success: (
+    light: tint($g-success-color, $g-shade-1),
+    base: $g-success-color,
+    dark: shade($g-success-color, $g-shade-1)
+  ),
+
+  warning: (
+    light: tint($g-warning-color, $g-shade-1),
+    base: $g-warning-color,
+    dark: shade($g-warning-color, $g-shade-1)
+  ),
+
+  alert: (
+    light: tint($g-alert-color, $g-shade-1),
+    base: $g-alert-color,
+    dark: shade($g-alert-color, $g-shade-1)
+  )
+);
+
+
+
+
+
+// ----- Typography Variables ----- //
+
+// Bourbon var to determine the modular scale
+// in their function to return consistent, scaled values
+$modular-scale-ratio: $minor-third;
+
+// Bourbon var to set the starting font size
+// in the modular scale functions
+$modular-scale-base: rem(15px);
+
+$typography-map: (
+  font-family: (
+    base: $lucida-grande,
+    header: $helvetica,
+    mono: $monospace
+  ),
+
+  font-size: (
+    h1: decimal-round(modular-scale(6), 2),
+    h2: decimal-round(modular-scale(5), 2),
+    h3: decimal-round(modular-scale(4), 2),
+    h4: decimal-round(modular-scale(3), 2),
+    h5: decimal-round(modular-scale(2), 2),
+    h6: decimal-round(modular-scale(1), 2),
+    p: decimal-round(modular-scale(0), 2),
+    small: decimal-round(modular-scale(-1), 2),
+    tiny: decimal-round(modular-scale(-2), 2)
+  ),
+
+  font-weight: (
+    bold: 700,
+    base: 400,
+    light: 100
+  ),
+
+  line-height: (
+    h1: decimal-round(modular-scale(7), 2),
+    h2: decimal-round(modular-scale(6), 2),
+    h3: decimal-round(modular-scale(5), 2),
+    h4: decimal-round(modular-scale(4), 2),
+    h5: decimal-round(modular-scale(3), 2),
+    h6: decimal-round(modular-scale(3), 2),
+    p: decimal-round(modular-scale(2.5), 2),
+    small: decimal-round(modular-scale(2), 2),
+    tiny: decimal-round(modular-scale(2), 2)
+  ),
+
+  margin: (
+    h1: spacing() 0,
+    h2: spacing() 0,
+    h3: spacing() 0,
+    h4: spacing(half) 0,
+    h5: spacing(half) 0,
+    h6: spacing(half) 0,
+    p: 0 0 spacing(double) 0,
+    small: spacing(half) 0,
+    tiny: spacing(half) 0
+  )
+);
+
+
+
+
+// ----- Container Variables ----- //
+
+
+$containers-map: (
+  border: (
+    base: 2px solid color(primary),
+    dark: 2px solid color(primary, dark)
+  ),
+
+  border-radius: (
+    base: spacing(half),
+    large: spacing()
+  ),
+
+  box-shadow: (
+    base: 0 0 spacing() color(mono, dark)
+  ),
+
+  background-color: (
+    base: color(primary),
+    dark: color(primary, dark)
+  ),
+
+  padding: (
+    half: spacing(half),
+    base: spacing(),
+    large: spacing(double)
+  )
+);
+
+
+// ----- Animation Variables ----- //
+
+$animations-map: (
+  time: (
+    base: 0.5s
+  )
+);

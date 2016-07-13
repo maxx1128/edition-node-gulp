@@ -1,0 +1,18 @@
+{
+  "patternTitle": "Buttons",
+  "button-sizes": [
+    {
+      "name": "Default",
+      "class": ""
+    }, {
+      "name": "Small",
+      "class": "btn__small"
+    }, {
+      "name": "Large",
+      "class": "btn__large"
+    }, {
+      "name": "Disabled",
+      "class": "btn__disabled"
+    }
+  ]
+}

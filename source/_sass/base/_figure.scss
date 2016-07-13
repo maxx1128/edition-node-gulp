@@ -1,0 +1,15 @@
+figure {
+  margin: 0 0 spacing() 0;
+
+  img {
+    display: block;
+    margin: 0 auto spacing(half);
+    max-width: none;
+    width: 100%;
+  }
+}
+
+figcaption {
+  font-size: type(font-size, small);
+  font-style: italic;
+}

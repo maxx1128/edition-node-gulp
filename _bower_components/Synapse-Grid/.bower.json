@@ -1,0 +1,13 @@
+{
+  "name": "Synapse-Grid",
+  "homepage": "https://github.com/maxx1128/Synapse-Grid",
+  "_release": "1e40f90030",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1e40f900303ff4ac5897d32be2c2cf5ab813c8d6"
+  },
+  "_source": "https://github.com/maxx1128/Synapse-Grid.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/maxx1128/Synapse-Grid.git"
+}

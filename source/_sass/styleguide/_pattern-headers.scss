@@ -1,0 +1,29 @@
+.sg-pattern {
+  @include clearfix();
+  position: relative;
+  padding: spacing(half);
+  margin-bottom: spacing();
+}
+
+.sg-pattern-head {
+  padding: spacing() 0;
+  margin: 0 0 spacing(double) 0;
+
+  font-family: type(font-family, header);
+  font-size: type(font-size);
+  text-align: center;
+
+  border-bottom: container(border);
+
+  a {
+    display: block;
+
+    cursor: pointer;
+    text-decoration: none;
+    color: color(mono, dark);
+
+    @include hovers() {
+      color: color(mono, dark);
+    }
+  }
+}

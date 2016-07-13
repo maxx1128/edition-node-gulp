@@ -6,7 +6,29 @@
 var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
-  argv = require('minimist')(process.argv.slice(2));
+  argv = require('minimist')(process.argv.slice(2)),
+
+  plumber = require('gulp-plumber'),
+
+  autoprefixer = require('gulp-autoprefixer'),
+  notify = require('gulp-notify'),
+  rename = require('gulp-rename'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps');
+
+
+// Function for plumber to handle errors
+function customPlumber(errTitle) {
+    return plumber({
+        errorHandler: notify.onError({
+            // Custom error titles go here
+            title: errTitle || 'Error running Gulp',
+            message: "<%= error.message %>",
+            sound: 'Submarine',
+        })
+    });
+}
+
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
@@ -144,6 +166,8 @@ function watch() {
   gulp.watch(path.resolve(paths().source.css, '**/*.css')).on('change', gulp.series('pl-copy:css', reload));
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*')).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reload));
 
+  gulp.watch(path.resolve(paths().source.sass, '**/**/*.scss')).on('change', gulp.series('sass', 'pl-copy:css', reload));
+
   var patternWatches = [
     path.resolve(paths().source.patterns, '**/*.json'),
     path.resolve(paths().source.patterns, '**/*.md'),
@@ -191,8 +215,40 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
 }));
 
 /******************************************************
+ * CUSTOM TASKS
+******************************************************/
+
+
+// Converts the Sass partials into a single CSS file
+gulp.task('sass', function () {
+    
+    var sassOptions = { 
+        outputStyle: 'expanded',
+    };
+
+    var autoprefixerOptions = {
+      browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+    };
+
+  return gulp
+    .src('source/_sass/main.scss')
+    .pipe(customPlumber('Error running Sass'))
+    .pipe(sourcemaps.init())
+    // Write Sass for either dev or prod
+    .pipe(sass(sassOptions))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write())
+    .pipe(rename("style.css"))
+    // Sends the Sass file to either the app or dist folder
+    .pipe(gulp.dest('source/css'))
+    .pipe(notify({ message: 'Sass Processed!', onLast: true }))
+    .pipe(browserSync.stream());
+});
+
+
+/******************************************************
  * COMPOUND TASKS
 ******************************************************/
 gulp.task('default', gulp.series('patternlab:build'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
-gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+gulp.task('patternlab:serve', gulp.series('sass', 'patternlab:build', 'patternlab:connect', watch));

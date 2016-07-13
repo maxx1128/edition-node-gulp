@@ -1,4 +1,9 @@
-.sg-pattern {
+.sg-header {
+  display: none;
+}
+
+.sg-pattern,
+.sg-pattern-category-title {
   @include clearfix();
   position: relative;
   padding: spacing(half);
@@ -10,10 +15,12 @@
   margin: 0 0 spacing(double) 0;
 
   font-family: type(font-family, header);
-  font-size: type(font-size);
-  text-align: center;
 
   border-bottom: container(border);
+
+  .sg-pattern-title {
+    font-size: type(font-size, h3) !important;
+  }
 
   a {
     display: block;

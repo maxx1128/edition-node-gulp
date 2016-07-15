@@ -36,6 +36,14 @@
   }
 }
 
+@mixin bem-mods__id($id) {
+  ##{$id},
+  [id^=#{$id}],
+  [id*=#{$id}] {
+    @content;
+  }
+}
+
 
 
 // The fix-cell and flex-cell mixins included components of the fix-flex mixin, which is used for items with a fixed width on one side and flexible on the other.

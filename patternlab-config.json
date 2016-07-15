@@ -28,7 +28,7 @@
   },
   "styleGuideExcludes": [
   ],
-  "defaultPattern": "all",
+  "defaultPattern": "",
   "defaultShowPatternInfo": false,
   "cleanPublic" : true,
   "patternExtension": "mustache",

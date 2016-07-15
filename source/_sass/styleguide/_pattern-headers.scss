@@ -1,5 +1,13 @@
-.sg-header {
-  display: none;
+.sg-header { display: none; }
+
+@include bem-mods__id('viewall-viewall-') {
+  .sg-pattern-category-title {
+    display: none;
+  }
+}
+
+.viewall-viewall-base {
+
 }
 
 .sg-pattern,

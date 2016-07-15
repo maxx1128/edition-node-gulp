@@ -5,7 +5,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-river.jpg",
+					"src": "http://placeimg.com/600/600/nature",
 					"alt": "Post Thumbnail"	
 				}
 			},
@@ -19,7 +19,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-ivy.jpg",
+					"src": "http://placeimg.com/600/600/nature",
 					"alt": "Ivy"	
 				}
 			},
@@ -33,7 +33,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-yosemite.jpg",
+					"src": "http://placeimg.com/600/600/nature",
 					"alt": "Yosemite"	
 				}
 			},
@@ -47,7 +47,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-fire.jpg",
+					"src": "http://placeimg.com/600/600/nature",
 					"alt": "Fire"	
 				}
 			},
@@ -61,7 +61,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-gear.jpg",
+					"src": "http://placeimg.com/600/600/nature",
 					"alt": "Camping Gear"	
 				}
 			},

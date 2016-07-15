@@ -3,11 +3,14 @@
 }
 
 .sg-pattern,
-.sg-pattern-category-title {
+.sg-pattern-category-title,
+.sg-pattern-category-body {
   @include clearfix();
-  position: relative;
   padding: spacing(half);
-  margin-bottom: spacing();
+}
+
+.sg-pattern-category-body {
+  @include padding(0 spacing() spacing() spacing());
 }
 
 .sg-pattern-head {
@@ -34,3 +37,4 @@
     }
   }
 }
+

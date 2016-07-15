@@ -10,11 +10,11 @@
 	},
 	"img": {
 		"landscape-4x3": {
-			"src": "../../images/sample/landscape-4x3-mountains.jpg",
+			"src": "http://placeimg.com/400/300/nature",
 			"alt": "Mountains"
 		},
 		"landscape-16x9": {
-			"src": "../../images/sample/landscape-4x3-mountains.jpg",
+			"src": "http://placeimg.com/400/300/nature",
 			"alt": "Mountains"	
 		}
 	},

@@ -4,23 +4,23 @@
   "bodyClass": "body",
   "img": {
     "landscape-4x3": {
-      "src": "../../images/fpo_4x3.png",
+      "src": "http://placeimg.com/400/300/nature",
       "alt": "4x3 Image"
     },
     "landscape-16x9": {
-      "src": "../../images/fpo_16x9.png",
+      "src": "http://placeimg.com/1600/900/nature",
       "alt": "16x9 Image"
     },
     "square": {
-      "src": "../../images/fpo_square.png",
+      "src": "http://placeimg.com/600/600/nature",
       "alt": "Square Thumbnail"
     },
     "avatar" : {
-      "src" : "../../images/fpo_avatar.png",
+      "src" : "http://placeimg.com/200/200/people",
       "alt" : "Person Name"
     },
     "banner": {
-      "src": "../../images/fpo_banner.png",
+      "src": "http://placeimg.com/900/300/nature",
       "alt": "Banner"
     }
   },

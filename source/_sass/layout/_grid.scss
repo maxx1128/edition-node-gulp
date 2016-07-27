@@ -51,15 +51,21 @@ $synapse: (
 
 .l__col-example {
   height: $layout-example-height;
-  padding-top: ($layout-example-height * .2) !important;
   box-sizing: border-box;
+  position: relative;
 
   text-align: center;
 
   background-color: color(mono);
 
-  &:nth-of-type(even) {
-    background-color: color(mono, light);
-  }
+  &:nth-of-type(even) { background-color: color(mono, light); }
+}
+
+.l__col-example--box {
+  @include size(100%);
+
+  background-color: color(secondary);
+
+  .l__col-example:nth-of-type(even) & { background-color: color(secondary, light); }
 }
 

@@ -30,7 +30,7 @@ $synapse: (
 */
 
 // For custom layouts, apply this to the row holding all the columns
-@mixin row-container($padding: spacing()) {
+@mixin row-container($padding: spacing(half) spacing()) {
   @include clearfix();
   max-width: size(max-width);
   margin: 0 auto;
@@ -40,7 +40,7 @@ $synapse: (
 
 // For custom layouts, apply this to the all the columns
 @mixin col-container() {
-  @include row-container(0 spacing());
+  @include row-container();
 }
 
 // For any elements in their own row that still need a max width and proper alignment, use this
@@ -49,7 +49,7 @@ $synapse: (
   @include row-container(spacing() spacing(double));
 }
 
-.__col-example {
+.l__col-example {
   height: $layout-example-height;
   padding-top: ($layout-example-height * .2) !important;
   box-sizing: border-box;

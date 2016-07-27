@@ -7,4 +7,9 @@
 .l-three-col__item {
   @include col-container();
   @include syn(medium, 4, 0, (inline-b float-l));
+
+  @include larger-than(medium) {
+    /* &:first-of-type { padding-left: 0; }
+    &:last-of-type { padding-right: 0; } */
+  }
 }

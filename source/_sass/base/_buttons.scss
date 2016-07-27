@@ -22,26 +22,6 @@ $btn-disabled-bg: color(mono);
 $btn-disabled-text: color(mono, light);
 $btn-disabled-opacity: .35;
 
-$btn-colors: (
-  success: (
-    base: color(success),
-    hover: color(success, dark)
-  ),
-  info: (
-    base: color(info),
-    hover: color(info, dark)
-  ),
-  warning: (
-    base: color(warning),
-    hover: color(warning, dark)
-  ),
-  alert: (
-    base: color(alert),
-    hover: color(alert, dark)
-  ),
-);
-
-
 .btn {
   @include transition(anim(time));
   display: inline-block;
@@ -62,20 +42,6 @@ $btn-colors: (
     text-decoration: none;
 
     background-color: $btn-hover-bg;
-  }
-}
-
-// For creating the different button color classes
-@each $name, $colors in $btn-colors {
-  $base-color: map-get($colors, base);
-  $hover-color: map-get($colors, hover);
-
-  .btn__#{$name} {
-    background-color: $base-color;
-
-    @include hovers() {
-      background-color: $hover-color;
-    }
   }
 }
 

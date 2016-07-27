@@ -56,10 +56,10 @@ $synapse: (
 
   text-align: center;
 
-  background-color: color(info);
+  background-color: color(mono);
 
   &:nth-of-type(even) {
-    background-color: color(info, light);
+    background-color: color(mono, light);
   }
 }
 

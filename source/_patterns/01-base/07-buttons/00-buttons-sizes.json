@@ -10,9 +10,6 @@
     }, {
       "name": "Large",
       "class": "btn__large"
-    }, {
-      "name": "Disabled",
-      "class": "btn__disabled"
     }
   ]
 }

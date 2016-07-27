@@ -49,24 +49,25 @@ $spacing-map: (
 // ----- Color Variables ----- //
 
 // Eeveelutions Palette
-$g-primary-color: #d59c4a;
-$g-secondary-color: #a4624a;
-$g-action-color: #c52052;
-$g-mono-color: #62627b;
-$g-info-color: #5ac5e6;
-$g-success-color: #319c73;
-$g-warning-color: #ffde52;
-$g-alert-color: #d54152;
+$g-primary-color: #73bd73;
+$g-secondary-color: #7bc5b4;
+$g-action-color: #d54a73;
+$g-mono-color: #cdcde6;
 
 $g-shade-1: 25%;
 
+/* 
+If you want to automatically create the lighter and darker shades:
+  - tint($g-primary-color, $g-shade-1)
+  - shade($g-primary-color, $g-shade-1)
+*/
 
 // Map for storing all color variables
 $color-map: (
   primary: (
-    light: tint($g-primary-color, $g-shade-1),
+    light: #8be68b,
     base: $g-primary-color,
-    dark: shade($g-primary-color, $g-shade-1)
+    dark: #317b41
   ),
 
   secondary: (
@@ -76,39 +77,15 @@ $color-map: (
   ),
 
   action: (
-    light: tint($g-action-color, $g-shade-1),
+    light: #ff7b94,
     base: $g-action-color,
-    dark: shade($g-action-color, $g-shade-1)
+    dark: #83294a
   ),
 
   mono: (
-    light: #fffefc,
+    light: #eeeeff,
     base: $g-mono-color,
     dark: #111
-  ),
-
-  info: (
-    light: tint($g-info-color, $g-shade-1),
-    base: $g-info-color,
-    dark: shade($g-info-color, $g-shade-1)
-  ),
-
-  success: (
-    light: tint($g-success-color, $g-shade-1),
-    base: $g-success-color,
-    dark: shade($g-success-color, $g-shade-1)
-  ),
-
-  warning: (
-    light: tint($g-warning-color, $g-shade-1),
-    base: $g-warning-color,
-    dark: shade($g-warning-color, $g-shade-1)
-  ),
-
-  alert: (
-    light: tint($g-alert-color, $g-shade-1),
-    base: $g-alert-color,
-    dark: shade($g-alert-color, $g-shade-1)
   )
 );
 
@@ -198,6 +175,7 @@ $containers-map: (
   ),
 
   background-color: (
+    light: color(mono, light),
     base: color(primary),
     dark: color(primary, dark)
   ),

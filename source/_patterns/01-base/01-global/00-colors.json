@@ -3,11 +3,7 @@
     { "scheme": "primary" },
     { "scheme": "secondary" },
     { "scheme": "action" },
-    { "scheme": "mono" },
-    { "scheme": "info" },
-    { "scheme": "success" },
-    { "scheme": "warning" },
-    { "scheme": "alert" }
+    { "scheme": "mono" }
   ],
 
   "color-tones": [

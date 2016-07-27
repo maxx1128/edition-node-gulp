@@ -20,6 +20,7 @@
     }, { 
       "property": "background-color",
       "values": [
+        { "name": "light" },
         { "name": "base" },
         { "name": "dark" }
       ]

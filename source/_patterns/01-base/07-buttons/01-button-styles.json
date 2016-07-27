@@ -4,17 +4,8 @@
       "name": "Alternate",
       "class": "btn__alt"
     }, {
-      "name": "Success",
-      "class": "btn__success"
-    }, {
-      "name": "Info",
-      "class": "btn__info"
-    }, {
-      "name": "Warning",
-      "class": "btn__warning"
-    }, {
-      "name": "Alert",
-      "class": "btn__alert"
+      "name": "Disabled",
+      "class": "btn__disabled"
     }
   ]
 }

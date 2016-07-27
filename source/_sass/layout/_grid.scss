@@ -30,17 +30,13 @@ $synapse: (
 */
 
 // For custom layouts, apply this to the row holding all the columns
-@mixin row-container($padding: spacing(half) spacing()) {
+// And to the columns within the row
+@mixin row-container($padding: spacing(), $flexbox: false) {
   @include clearfix();
   max-width: size(max-width);
   margin: 0 auto;
   box-sizing: border-box;
   padding: $padding;
-}
-
-// For custom layouts, apply this to the all the columns
-@mixin col-container() {
-  @include row-container();
 }
 
 // For any elements in their own row that still need a max width and proper alignment, use this
@@ -49,23 +45,25 @@ $synapse: (
   @include row-container(spacing() spacing(double));
 }
 
-.l__col-example {
-  height: $layout-example-height;
-  box-sizing: border-box;
+.h__row-example { background-color: color(mono); }
+
+.h__col-example {
+  // height: $layout-example-height;
   position: relative;
 
-  text-align: center;
+  background-color: color(primary, dark);
 
-  background-color: color(mono);
-
-  &:nth-of-type(even) { background-color: color(mono, light); }
+  &:nth-of-type(even) { background-color: color(secondary, dark); }
 }
 
-.l__col-example--box {
+.h__col-example--box {
   @include size(100%);
 
-  background-color: color(secondary);
+  background-color: color(primary, light);
 
-  .l__col-example:nth-of-type(even) & { background-color: color(secondary, light); }
+  .h__col-example:nth-of-type(even) & { background-color: color(secondary, light); }
+
+  & > *:first-of-type { margin-top: 0; }
+  & > *:last-of-type { margin-bottom: 0; }
 }
 

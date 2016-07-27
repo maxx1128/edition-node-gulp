@@ -4,18 +4,16 @@
   border-bottom: container(border);
 }
 
-.p-header__container {
-  @include row-container();
-}
+.p-header__container,
+.p-header__logo,
+.p-header__nav { @include row-container(); }
 
 .p-header__logo {
-  @include col-container();
   @include syn(base, 12, 0, (''));
   @include syn(small, 2, 0, (float-l inline-b));
 }
 
 .p-header__nav {
-  @include col-container();
   @include syn(base, 12, 0, (''));
   @include syn(small, 9, 0, (float-r));
 }

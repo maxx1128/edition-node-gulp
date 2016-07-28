@@ -2,10 +2,10 @@
 // .l-sidebar__main for the content
 // .l-sidebar__sidebar for the sidebar
 
-.l-sidebar { @include row-container($flexbox: true); }
+.l-sidebar { @include row-container(); }
 
 .l-sidebar__main,
-.l-sidebar__sidebar { @include row-container(); }
+.l-sidebar__sidebar { @include col-container(); }
 
 .l-sidebar__main {
   @include syn(medium, 8, 0, ('float-l'));

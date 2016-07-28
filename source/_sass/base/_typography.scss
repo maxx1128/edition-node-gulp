@@ -49,10 +49,10 @@ h6 { font-family: type(font-family, header); }
 // Horizontal Rule
 hr {
   border: 0;
-  height: 2px;
-  margin: spacing(double) 0;
+  height: 1px;
+  margin: spacing() 0;
 
-  background: color(primary, light);
+  background: color(primary, dark);
 }
 
 abbr {

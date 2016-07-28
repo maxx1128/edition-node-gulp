@@ -142,8 +142,8 @@ $typography-map: (
 
   margin: (
     h1: spacing() 0,
-    h2: spacing() 0,
-    h3: spacing() 0,
+    h2: spacing(half) 0,
+    h3: spacing(half) 0,
     h4: spacing(half) 0,
     h5: spacing(half) 0,
     h6: spacing(half) 0,

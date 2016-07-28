@@ -1,7 +1,8 @@
 .p-header {
   @include clearfix();
+  margin-bottom: spacing();
 
-  border-bottom: container(border);
+  border-bottom: container(border, dark);
 }
 
 .p-header__container,

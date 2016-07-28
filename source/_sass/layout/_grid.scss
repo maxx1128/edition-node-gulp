@@ -58,6 +58,8 @@ $synapse: (
 
 .h__col-example--box {
   @include size(100%);
+  padding: spacing();
+  box-sizing: border-box;
 
   background-color: color(primary, light);
 

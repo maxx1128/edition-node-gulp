@@ -9,8 +9,10 @@
 
 .l-sidebar__main {
   @include syn(medium, 8, 0, ('float-l'));
+  @include syn(large, 9, 0, (''));
 }
 
 .l-sidebar__sidebar {
   @include syn(medium, 4, 0, ('float-r'));
+  @include syn(large, 3, 0, (''));
 }

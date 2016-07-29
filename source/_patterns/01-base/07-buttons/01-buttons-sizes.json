@@ -1,10 +1,6 @@
 {
-  "patternTitle": "Buttons",
   "button-sizes": [
     {
-      "name": "Default",
-      "class": ""
-    }, {
       "name": "Small",
       "class": "btn__small"
     }, {

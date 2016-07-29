@@ -2,10 +2,12 @@
   "button-sizes": [
     {
       "name": "Small",
-      "class": "btn__small"
+      "class": "btn__small",
+      "link": "javascript:void(0)"
     }, {
       "name": "Large",
-      "class": "btn__large"
+      "class": "btn__large",
+      "link": "javascript:void(0)"
     }
   ]
 }

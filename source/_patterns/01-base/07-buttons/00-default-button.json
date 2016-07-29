@@ -1,3 +1,4 @@
 {
-  "button_text": "This is a button"
+  "button_text": "This is a button",
+  "button_link": "javascript:void(0)"
 }

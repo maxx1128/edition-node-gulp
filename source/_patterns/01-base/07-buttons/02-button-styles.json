@@ -2,10 +2,12 @@
   "button-sizes": [
     {
       "name": "Alternate",
-      "class": "btn__alt"
+      "class": "btn__alt",
+      "link": "javascript:void(0)"
     }, {
       "name": "Disabled",
-      "class": "btn__disabled"
+      "class": "btn__disabled",
+      "link": "javascript:void(0)"
     }
   ]
 }

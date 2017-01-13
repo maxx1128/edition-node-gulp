@@ -18,16 +18,16 @@ fieldset {
   border: 0;
 }
 
-.form__container { margin-bottom: spacing(); }
+.form__container { margin-bottom: spacing(double); }
 
 .form__legend { margin-bottom: spacing(half); }
 
-@include bem-mods(form__label) {
+.form__label {
   display: block;
   padding-bottom: spacing(half);
 }
 
-@include bem-mods(form__input) {
+.form__input {
   width: 100%;
   margin: 0;
   padding: spacing(half);
@@ -35,7 +35,7 @@ fieldset {
   font-size: 100%;
   font-family: inherit;
 
-  border: container(border);
+  border: container(border, dark);
 }
 
 

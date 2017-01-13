@@ -3,18 +3,20 @@
  * EDITION-NODE-GULP
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
-var gulp = require('gulp'),
-  path = require('path'),
-  browserSync = require('browser-sync').create(),
-  argv = require('minimist')(process.argv.slice(2)),
-
-  plumber = require('gulp-plumber'),
-
+var
+  gulp         = require('gulp'),
+  path         = require('path'),
+  browserSync  = require('browser-sync').create(),
+  argv         = require('minimist')(process.argv.slice(2)),
+  
+  plumber      = require('gulp-plumber'),
+  // ghPages      = require('gulp-gh-pages'),
   autoprefixer = require('gulp-autoprefixer'),
-  notify = require('gulp-notify'),
-  rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps');
+  include      = require('gulp-include'),
+  notify       = require('gulp-notify'),
+  rename       = require('gulp-rename'),
+  sass         = require('gulp-sass'),
+  sourcemaps   = require('gulp-sourcemaps');
 
 
 // Function for plumber to handle errors
@@ -168,6 +170,8 @@ function watch() {
 
   gulp.watch(path.resolve(paths().source.sass, '**/**/*.scss')).on('change', gulp.series('sass', 'pl-sass', 'pl-copy:css', reload));
 
+  gulp.watch(path.resolve(paths().source.js_pre, '**/**/*.js')).on('change', gulp.series('pl-js', 'pl-copy:js', reload));
+
   var patternWatches = [
     path.resolve(paths().source.patterns, '**/*.json'),
     path.resolve(paths().source.patterns, '**/*.md'),
@@ -270,10 +274,32 @@ gulp.task('pl-sass', function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task('pl-js', function () {
+
+  return gulp
+    .src('source/_js/main.js')
+    .pipe(customPlumber('Error running Include'))
+    .pipe(include())
+    .pipe(gulp.dest('source/js'))
+    .pipe(notify({ message: 'Javascript Processed!', onLast: true }))
+    .pipe(browserSync.stream());
+});
+
+
+// gulp.task('pages', function() {
+//   return gulp.src('public/**/**/**/*')
+//     .pipe(ghPages({
+//       force: true,
+//       remoteUrl: "https://github.com/maxx1128/Journeys-in-Recovery-PatternLibrary.git",
+//       cacheDir: 'public/**/**/**/*'
+//     }));
+// });
+
 
 /******************************************************
  * COMPOUND TASKS
 ******************************************************/
 gulp.task('default', gulp.series('patternlab:build'));
+// gulp.task('deploy', gulp.series('patternlab:build', 'pages'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
-gulp.task('patternlab:serve', gulp.series('sass', 'pl-sass', 'patternlab:build', 'patternlab:connect', watch));
+gulp.task('patternlab:serve', gulp.series('sass', 'pl-sass', 'pl-js', 'patternlab:build', 'patternlab:connect', watch));

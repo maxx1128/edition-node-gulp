@@ -1,20 +1,20 @@
-.p-header {
+.plph-p-header {
   @include clearfix();
   margin-bottom: spacing();
 
   border-bottom: container(border, dark);
 }
 
-.p-header__container,
-.p-header__logo,
-.p-header__nav { @include row-container(); }
+.plph-p-header__container,
+.plph-p-header__logo,
+.plph-p-header__nav { @include row-container(); }
 
-.p-header__logo {
+.plph-p-header__logo {
   @include syn(base, 12, 0, (''));
   @include syn(small, 2, 0, (float-l inline-b));
 }
 
-.p-header__nav {
+.plph-p-header__nav {
   @include syn(base, 12, 0, (''));
   @include syn(small, 9, 0, (float-r));
 }

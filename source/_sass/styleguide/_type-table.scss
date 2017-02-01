@@ -19,7 +19,7 @@
 
 
 
-.b-font-family__example {
+.plph-b-font-family__example {
   margin-bottom: spacing(double);
 }
 
@@ -28,7 +28,7 @@
   @if ($property == 'font-family') {
     @each $family, $value in $elements {
 
-      .b-font-family__example-#{$family} {
+      .plph-b-font-family__example-#{$family} {
         position: relative;
 
         text-transform: capitalize;

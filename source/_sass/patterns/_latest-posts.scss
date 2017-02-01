@@ -1,12 +1,12 @@
 /* Post List */
 
 // Blocks of the most recent posts, with images
-.p-latest-posts { margin-bottom: spacing(double); }
+.plph-p-latest-posts { margin-bottom: spacing(double); }
 
-.p-latest-posts__title { margin-top: 0; }
+.plph-p-latest-posts__title { margin-top: 0; }
 
 // List of blocks for recent posts
-.p-latest-posts__list {
+.plph-p-latest-posts__list {
   @include margin(0 0 spacing() 0);
   list-style-type: none;
 }

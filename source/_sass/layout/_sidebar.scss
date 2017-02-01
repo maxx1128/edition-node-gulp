@@ -1,18 +1,18 @@
 // Layout classes for pages with a sidebar
-// .l-sidebar__main for the content
-// .l-sidebar__sidebar for the sidebar
+// .plph-l-sidebar__main for the content
+// .plph-l-sidebar__sidebar for the sidebar
 
-.l-sidebar { @include row-container(); }
+.plph-l-sidebar { @include row-container(); }
 
-.l-sidebar__main,
-.l-sidebar__sidebar { @include col-container(); }
+.plph-l-sidebar__main,
+.plph-l-sidebar__sidebar { @include col-container(); }
 
-.l-sidebar__main {
+.plph-l-sidebar__main {
   @include syn(medium, 8, 0, ('float-l'));
   @include syn(large, 9, 0, (''));
 }
 
-.l-sidebar__sidebar {
+.plph-l-sidebar__sidebar {
   @include syn(medium, 4, 0, ('float-r'));
   @include syn(large, 3, 0, (''));
 }

@@ -1,9 +1,9 @@
-.p-related-posts {}
+.plph-p-related-posts {}
 
-.p-related-posts__title { margin-top: 0; }
+.plph-p-related-posts__title { margin-top: 0; }
 
 // The text-only version of most recent posts
-.p-related-posts__list {
+.plph-p-related-posts__list {
   @include margin(0 0 spacing() 0);
   list-style-type: none;
 

@@ -1,4 +1,4 @@
-.c-pagination {
+.plph-c-pagination {
   overflow: hidden;
   margin: 0;
 
@@ -15,6 +15,6 @@
   a { padding: spacing(half) spacing(); }
 }
 
-.c-pagination__current {
+.plph-c-pagination__current {
   font-weight: type(font-weight, bold);
 }

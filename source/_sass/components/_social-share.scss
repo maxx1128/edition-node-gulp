@@ -1,14 +1,14 @@
 $social-share-bg: color(secondary, dark);
 $social-share-bg-hover: color(secondary, dark);
 
-.c-social-share {
+.plph-c-social-share {
   overflow: hidden;
   margin: 0 0 spacing() 0;
 
   list-style-type: none;
 }
 
-.c-social-share__item {
+.plph-c-social-share__item {
   display: inline-block;
   margin-right: spacing(half);
 

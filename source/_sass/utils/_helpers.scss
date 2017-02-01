@@ -1,20 +1,20 @@
 /* Completely remove from the flow and screen readers. */
-.h-is-hidden {
+.plph-h-is-hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
 /* Floats */
-.h-right { float: right !important; }
-.h-left { float: left !important; }
-.h-clear { @include clearfix(); }
+.plph-h-right { float: right !important; }
+.plph-h-left { float: left !important; }
+.plph-h-clear { @include clearfix(); }
 
 /* Text-Align */
-.h-align-right { text-align: right !important; }
-.h-align-center { text-align: center !important; }
-.h-align-left { text-align: left !important; }
+.plph-h-align-right { text-align: right !important; }
+.plph-h-align-center { text-align: center !important; }
+.plph-h-align-left { text-align: left !important; }
 
-.h-is-vishidden {
+.plph-h-is-vishidden {
   position: absolute !important;
   overflow: hidden;
   width: 1px;
@@ -23,3 +23,9 @@
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+.plph-h-error { color: red; }
+.plph-h-border-error { border-color: red; }
+
+.plph-h-valid { color: green; }
+.plph-h-border-valid { border-color: green; }

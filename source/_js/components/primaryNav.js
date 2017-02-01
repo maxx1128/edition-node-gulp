@@ -27,7 +27,7 @@ function primaryNav($, patternId) {
 var PRIMARYNAV = {
   "init":function(){
     // Change ID selecter here!
-    $('.c-primaryNav:not([jr-init])').each(function(){
+    $('.plph-c-primaryNav:not([jr-init])').each(function(){
       var id = 'UNIQUEID_' + Math.floor((Math.random() * 999999999) + 1);
       $(this).attr('id', id);
       

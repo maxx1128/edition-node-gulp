@@ -1,5 +1,5 @@
 ---
-el: ".b-swatches"
+el: ".plph-b-swatches"
 title: "Colors"
 ---
 

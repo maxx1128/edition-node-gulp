@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
-.p-footer {
+.plph-p-footer {
   padding-top: spacing();
   
   color: color(mono, light);
@@ -11,18 +11,18 @@
   a { color: color(mono, light); }
 }
 
-.p-footer__container,
-.p-footer__links,
-.p-footer__copyright {
+.plph-p-footer__container,
+.plph-p-footer__links,
+.plph-p-footer__copyright {
   @include row-container();
 }
 
-.p-footer__links {
+.plph-p-footer__links {
   @include syn(base, 12, 0, (marg-b-2));
   @include syn(small, 7, 0, (inline-b marg-b-0));
 }
 
-.p-footer__copyright {
+.plph-p-footer__copyright {
   @include syn(base, 12, 0, (''));
   @include syn(small, 5, 0, (inline-b float-r align-r));
 }

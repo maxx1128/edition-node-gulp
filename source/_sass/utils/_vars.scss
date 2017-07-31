@@ -33,7 +33,7 @@ $z-layers: (
   modal: 4001
 );
 
-$g-base-spacing: em(16px);
+$g-base-spacing: rem(16px);
 
 // Spacing units for padding, margin, etc
 $spacing-map: (
@@ -48,13 +48,13 @@ $spacing-map: (
 
 // ----- Color Variables ----- //
 
-// Eeveelutions Palette
-$g-primary-color: #73bd73;
-$g-secondary-color: #7bc5b4;
-$g-action-color: #d54a73;
-$g-mono-color: #cdcde6;
+// Espeon Palette
+$g-primary-color: #e6a4d5;
+$g-secondary-color: #4a73b4;
+$g-action-color: #c52052;
+$g-mono-color: #c5c5c5;
 
-$g-shade-1: 25%;
+$g-shade-1: 30%;
 
 /* 
 If you want to automatically create the lighter and darker shades:
@@ -65,25 +65,25 @@ If you want to automatically create the lighter and darker shades:
 // Map for storing all color variables
 $color-map: (
   primary: (
-    light: #8be68b,
+    light: #eebdee,
     base: $g-primary-color,
-    dark: #317b41
+    dark: #7b4a7b
   ),
 
   secondary: (
     light: tint($g-secondary-color, $g-shade-1),
     base: $g-secondary-color,
-    dark: shade($g-secondary-color, $g-shade-1)
+    dark: #314173
   ),
 
   action: (
-    light: #ff7b94,
+    light: tint($g-action-color, $g-shade-1),
     base: $g-action-color,
-    dark: #83294a
+    dark: #8b2052
   ),
 
   mono: (
-    light: #eeeeff,
+    light: #fff,
     base: $g-mono-color,
     dark: #080401
   )
@@ -97,26 +97,31 @@ $color-map: (
 
 // Bourbon var to determine the modular scale
 // in their function to return consistent, scaled values
-$modular-scale-ratio: $minor-third;
+$g-modular-scale--ratio: 1.2;
 
 // Bourbon var to set the starting font size
 // in the modular scale functions
-$modular-scale-base: rem(15px);
+$g-modular-scale--base: 1rem;
+
+$g-system-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$g-header-font-stack: "Futura", "Helvetica Neue", "Helvetica", "Roboto", "Arial", Sans Serif;
+$g-mono-font-stack: "Bitstream Vera Sans Mono", "Consolas", "Courier", Monospace;
 
 $typography-map: (
   font-family: (
-    base: $lucida-grande,
-    header: $helvetica,
-    mono: $monospace
+    base: $g-system-font-stack,
+    header: $g-header-font-stack,
+    mono: $g-mono-font-stack
   ),
 
   font-size: (
-    h1: decimal-round(modular-scale(6), 2),
-    h2: decimal-round(modular-scale(5), 2),
-    h3: decimal-round(modular-scale(4), 2),
-    h4: decimal-round(modular-scale(3), 2),
-    h5: decimal-round(modular-scale(2), 2),
-    h6: decimal-round(modular-scale(1), 2),
+    h1: decimal-round(modular-scale(5), 2),
+    h2: decimal-round(modular-scale(4), 2),
+    h3: decimal-round(modular-scale(3), 2),
+    h4: decimal-round(modular-scale(2), 2),
+    h5: decimal-round(modular-scale(1), 2),
+    h6: decimal-round(modular-scale(0), 2),
+    large: decimal-round(modular-scale(0), 2),
     p: decimal-round(modular-scale(0), 2),
     small: decimal-round(modular-scale(-1), 2),
     tiny: decimal-round(modular-scale(-2), 2)
@@ -178,12 +183,6 @@ $containers-map: (
     light: color(mono, light),
     base: color(primary),
     dark: color(primary, dark)
-  ),
-
-  padding: (
-    half: spacing(half),
-    base: spacing(),
-    large: spacing(double)
   )
 );
 

@@ -44,3 +44,35 @@
         @return $number;
     }
 }
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Converts other values to px values
+@function px($em, $context: 16) {
+  $px: (strip-unit($em) * $context) * 1px;
+
+  @return $px;
+}
+
+// Converts pixel values to em values
+@function em($pixels, $context: 16) {
+  $em: (strip-unit($pixels) / $context) * 1em;
+
+  @return $em;
+}
+
+// Converts pixel values to rem values
+@function rem($pixels, $context: 16) {
+  $rem: (strip-unit($pixels) / $context) * 1rem;
+
+  @return $rem;
+}

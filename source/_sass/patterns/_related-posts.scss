@@ -4,11 +4,11 @@
 
 // The text-only version of most recent posts
 .plph-p-related-posts__list {
-  @include margin(0 0 spacing() 0);
+  margin: 0 0 spacing() 0;
   list-style-type: none;
 
   li {
-    padding: container(padding, half) 0;
+    padding: spacing(half) 0;
     border-bottom: container(border);
   }
 

@@ -23,7 +23,7 @@ $btn-disabled-text: color(mono, light);
 $btn-disabled-opacity: .35;
 
 .btn {
-  @include transition(anim(time));
+  transition: anim(time);
   display: inline-block;
   padding: $btn-pad;
 
@@ -36,7 +36,7 @@ $btn-disabled-opacity: .35;
   border-radius: $btn-radius;
 
   @include hovers() {
-    @include transition($btn-trans);
+    transition: $btn-trans;
 
     color: $btn-hover-text;
     text-decoration: none;

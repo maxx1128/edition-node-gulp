@@ -4,43 +4,32 @@ $swatches-tones-per-row: 2;
 $swatch-base-height: 120px;
 $swatch-tone-height: 80px;
 
-$swatch-hex-position: null null spacing(half) spacing(half);
-$swatch-shade-position: spacing(half) null null spacing(half);
-
-$swatch-light-text: color(mono, light);
-$swatch-dark-text: color(mono, dark);
-
-$swatch-base__shade-font-size: type(font-size, h5);
-$swatch-base__hex-font-size: type(font-size);
-
-$swatch-tone__shade-font-size: type(font-size, small);
-$swatch-tone__hex-font-size: type(font-size, tiny);
-
-
 // Mixin for generating the common swatch colors
 @mixin swatch__color-scheme-generator($u-color, $shade, $base: false) {
-  @include contra-color($u-color, $swatch-light-text, $swatch-dark-text);
+  @include contra-color($u-color, color(mono, light), color(mono, dark));
   position: relative;
 
+  text-transform: capitalize;
+
   @if ($base == true) {
-    font-size: $swatch-base__shade-font-size;
-    text-transform: uppercase;
-
-    &::after { font-size: $swatch-base__hex-font-size; }
+    font-size: type(font-size, h4);
   } @else {
-    font-size: $swatch-tone__shade-font-size;
-    text-transform: capitalize;
+    font-size: type(font-size, small);
+  }
 
-    &::after { font-size: $swatch-tone__hex-font-size; }
+  &::before,
+  &::after {
+    position: absolute;
+    left: spacing(half);
   }
 
   &::before {
-    @include position(absolute, $swatch-shade-position);
+    top: spacing(half);
     content: quote(inspect($shade));
   }
 
   &::after {
-    @include position(absolute, $swatch-hex-position);
+    bottom: spacing(half);
     content: quote(inspect($u-color));
 
     text-transform: uppercase;
@@ -65,25 +54,26 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
 
 // The base color for every scheme
 .plph-b-swatch__base {
-  @include size(100% $swatch-base-height);
+  width: 100%;
+  height: $swatch-base-height;
 }
 
 // Container for both light and dark tones
 .plph-b-swatch__all-tones {
-  @include size(100% $swatch-tone-height);
   @include clearfix();
+  width: 100%;
+  height: $swatch-tone-height;
 }
 
 // Every light and dark tone of the base color
 .plph-b-swatch__tone {
-  @include size(100%);
   display: inline-block;
+  width: 100%;
+  height: 100%;
   margin: 0;
   float: left;
 
-  @include larger-than(small) {
-    width: percentage(1/$swatches-tones-per-row);
-  }
+  @include larger-than(small) { width: percentage(1/$swatches-tones-per-row); }
 }
 
 
@@ -94,7 +84,9 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
     .plph-b-swatch__base { @include swatch__color-scheme-generator($base-color, $palette, $base: true); }
     
     @each $tone-name, $tone-value in $tones {
-      ._tone-#{$tone-name} { @include swatch__color-scheme-generator($tone-value, $tone-name); }
+      .plph-b-swatch__tone--#{$tone-name} {
+        @include swatch__color-scheme-generator($tone-value, $tone-name);
+      }
     }
   }
 }

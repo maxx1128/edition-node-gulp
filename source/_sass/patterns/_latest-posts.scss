@@ -7,6 +7,7 @@
 
 // List of blocks for recent posts
 .plph-p-latest-posts__list {
-  @include margin(0 0 spacing() 0);
+  margin: 0 0 spacing() 0;
+
   list-style-type: none;
 }

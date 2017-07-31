@@ -13,7 +13,7 @@ $social-share-bg-hover: color(secondary, dark);
   margin-right: spacing(half);
 
   a {
-    @include transition(anim(time));
+    transition: anim(time);
     display: block;
     padding: spacing(half) spacing();
 
@@ -23,7 +23,7 @@ $social-share-bg-hover: color(secondary, dark);
     background: $social-share-bg;
 
     @include hovers() {
-      @include transition(anim(time));
+      transition: anim(time);
       text-decoration: none;
 
       background: $social-share-bg-hover;

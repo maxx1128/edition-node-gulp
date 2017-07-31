@@ -1,3 +1,13 @@
+// Clearfix mixin
+@mixin clearfix {
+  &::after {
+    content: '';
+
+    display: table;
+    clear: both;
+  }
+}
+
 // Mixin to use with the breakpoint map, sets any styles to be used above a certain screen width
 @mixin larger-than($point-name) {
   $width: map-get($breakpoint-map, $point-name);
@@ -91,9 +101,11 @@
 @mixin contra-color($color, $light: #FFF, $dark: #000) {
    background-color: $color;
    
-   @if (lightness($color) > 50) {
+  @if (type-of($color) == 'color') {
+    @if (lightness($color) > 50) {
       color: $dark;
-   } @else {
+    } @else {
       color: $light;
-   }
+    }
+  } 
 };

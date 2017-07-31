@@ -17,9 +17,7 @@
   padding: spacing(half);
 }
 
-.sg-pattern-category-body {
-  @include padding(0 spacing() spacing() spacing());
-}
+.sg-pattern-category-body { padding: 0 spacing() spacing() spacing(); }
 
 .sg-pattern-head {
   padding: spacing() 0;
@@ -29,9 +27,7 @@
 
   border-bottom: container(border);
 
-  .sg-pattern-title {
-    font-size: type(font-size, h3) !important;
-  }
+  .sg-pattern-title { font-size: type(font-size, h3) !important; }
 
   a {
     display: block;

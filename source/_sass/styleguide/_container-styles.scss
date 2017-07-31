@@ -5,7 +5,8 @@ $cont-item-marg-bottom: spacing(double);
 
 .container-el {
   @include clearfix();
-  @include size(100%);
+  width: 100%;
+  height: 100%;
   margin-bottom: spacing();
 }
 
@@ -43,11 +44,13 @@ $cont-item-marg-bottom: spacing(double);
         @if ($property == 'padding') {
 
           &::after {
-            @include position(absolute, ($value + spacing(half)));
+            position: absolute;
+            top: $value + spacing(half);
           }
 
           &::before {
-            @include position(absolute, $value);
+            position: absolute;
+            top: $value;
             content: '';
             display: block;
 
@@ -57,7 +60,9 @@ $cont-item-marg-bottom: spacing(double);
         } @else {
 
           &::after {
-            @include position(absolute, spacing() null null spacing());
+            position: absolute;
+            top: spacing();
+            left: spacing();
           }
         }
       }

@@ -13,8 +13,10 @@
   border-left: container(border);
 
   &:after {
-    @include position(absolute, spacing(double) null null (spacing(double) * -1));
-    @include transform(rotate(270deg));
+    position: absolute;
+    top: spacing(double);
+    left: (spacing(double) * -1);
+    transform: rotate(270deg);
     content: 'Notes';
     padding-bottom: spacing(half);
 
@@ -34,11 +36,16 @@
 }
 
 .annotation-tip {
-  @include position(absolute, 0 null null 0);
-  @include margin(-10px null null -10px);
-  @include size(25px);
-  padding-top: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: block;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  margin-top: -10px;
+  margin-left: -10px;
   z-index: 100;
 
   text-align: center;

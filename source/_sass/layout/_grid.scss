@@ -1,6 +1,3 @@
-$layout-example-height: 200px;
-
-
 // Config for Synapse using global variables
 $synapse: (
   columns: 12,
@@ -14,7 +11,7 @@ $synapse: (
     spacing(half),
     spacing(),
     spacing(double),
-    spacing(double)
+    spacing(double) * 2
   )
 );
 
@@ -42,28 +39,3 @@ $synapse: (
 @mixin col-container() {
   @include row-container(0 spacing(half));
 }
-
-.h__row-example { background-color: color(mono); }
-
-.h__col-example {
-  // height: $layout-example-height;
-  position: relative;
-
-  background-color: color(primary, dark);
-
-  &:nth-of-type(even) { background-color: color(secondary, dark); }
-}
-
-.h__col-example--box {
-  @include size(100%);
-  padding: spacing();
-  box-sizing: border-box;
-
-  background-color: color(primary, light);
-
-  .h__col-example:nth-of-type(even) & { background-color: color(secondary, light); }
-
-  & > *:first-of-type { margin-top: 0; }
-  & > *:last-of-type { margin-bottom: 0; }
-}
-

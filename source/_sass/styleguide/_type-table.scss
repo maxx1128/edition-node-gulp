@@ -36,7 +36,9 @@
         font-weight: type(font-weight, bold);
 
         &:after {
-          @include position(absolute, 0 null null calc(100% + 5px));
+          position: absolute;
+          top: 0;
+          left: calc(100% + 5px);
           content: quote(inspect($value));
           width: em(225px);
 

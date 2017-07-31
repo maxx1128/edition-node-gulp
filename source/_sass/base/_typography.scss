@@ -5,7 +5,7 @@ $type-properties: 'font-size', 'line-height', 'margin';
   #{$type} {
 
     @each $prop in $type-properties {
-      #{$prop}: type($prop, $type);
+      #{$prop}: type(#{$prop}, #{$type});
     }
   }
 }

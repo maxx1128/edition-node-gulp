@@ -10,9 +10,16 @@
 '_settings/container';
 
 @import
+'_tools/calc',
+'_tools/colors',
 '_tools/functions',
+'_tools/helpers',
+'_tools/layout',
 '_tools/mixins',
-'_tools/helpers';
+'_tools/modular-scale',
+'_tools/selectors',
+'_tools/typography'
+;
 
 @import
 '_styleguide/type-table',

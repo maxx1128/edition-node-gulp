@@ -19,10 +19,15 @@ Go through each pattern one by one and
 '_settings/container';
 
 @import
-'_tools/modular-scale',
-'_tools/functions',
 '_tools/mixins',
-'_tools/helpers';
+'_tools/layout',
+'_tools/calc',
+'_tools/colors',
+'_tools/functions',
+'_tools/helpers',
+'_tools/modular-scale',
+'_tools/selectors',
+'_tools/typography';
 
 @import
 '_layout/grid',

@@ -1,6 +1,6 @@
 .sg-header { display: none; }
 
-@include bem-mods__id('viewall-viewall-') {
+@include bem-mods-id('viewall-viewall-') {
   .sg-pattern-category-title {
     display: none;
   }

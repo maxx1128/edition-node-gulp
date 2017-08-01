@@ -1,19 +1,19 @@
 ol,
 ul {
   padding: 0;
-  margin-bottom: spacing();
-  margin-left: spacing(double);
+  margin-bottom: plph-spacing();
+  margin-left: plph-spacing(double);
 
-  line-height: type(line-height, h6);
-  font-size: type(font-size, p);
+  line-height: plph-type(line-height, h6);
+  font-size: plph-type(font-size, p);
 
   ol,
   ul {
-    margin-top: spacing(half);
+    margin-top: plph-spacing(half);
     margin-bottom: 0;
   }
 
-  li { margin-bottom: spacing(half); }
+  li { margin-bottom: plph-spacing(half); }
 }
 
 /* Definition Lists */
@@ -24,7 +24,7 @@ dl {
 
 dt,
 dd {
-  margin-bottom: spacing(half);
+  margin-bottom: plph-spacing(half);
 }
 
 dt {
@@ -32,5 +32,5 @@ dt {
 }
 
 dd {
-  margin-left: spacing();
+  margin-left: plph-spacing();
 }

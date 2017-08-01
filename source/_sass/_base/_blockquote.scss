@@ -2,10 +2,10 @@
 blockquote {
   @include syn(base, 12, 0, (marg-b-2 pad-2 pad-l-3));
 
-  color: color(primary, dark);
+  color: plph-color(primary, dark);
   font-style: italic;
-  font-size: type(font-size, h6);
-  line-height: type(line-height, h4);
+  font-size: plph-type(font-size, h6);
+  line-height: plph-type(line-height, h4);
 
-  border-left: container(border);
+  border-left: plph-container(border);
 }

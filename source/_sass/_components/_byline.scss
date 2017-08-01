@@ -1,7 +1,7 @@
 .plph-c-byline {
-  margin-top: spacing();
-  margin-bottom: spacing();
+  margin-top: plph-spacing();
+  margin-bottom: plph-spacing();
 
-  font-size: type(font-size, small);
+  font-size: plph-type(font-size, small);
   font-style: italic;
 }

@@ -20,7 +20,7 @@
 
 
 .plph-b-font-family__example {
-  margin-bottom: spacing(double);
+  margin-bottom: plph-spacing(double);
 }
 
 @each $property, $elements in $typography-map {
@@ -33,7 +33,7 @@
 
         text-transform: capitalize;
         font-family: $value;
-        font-weight: type(font-weight, bold);
+        font-weight: plph-type(font-weight, bold);
 
         &:after {
           position: absolute;
@@ -42,7 +42,7 @@
           content: quote(inspect($value));
           width: em(225px);
 
-          font-weight: type(font-weight);
+          font-weight: plph-type(font-weight);
 
           @include larger-than(small) { width: em(350px); }
 

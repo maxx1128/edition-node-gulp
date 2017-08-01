@@ -7,14 +7,14 @@
   li {
     display: inline-block;
 
-    border-right: container(border);
+    border-right: plph-container(border);
 
     &:last-child { border: 0; }
   }
 
-  a { padding: spacing(half) spacing(); }
+  a { padding: plph-spacing(half) plph-spacing(); }
 }
 
 .plph-c-pagination__current {
-  font-weight: type(font-weight, bold);
+  font-weight: plph-type(font-weight, bold);
 }

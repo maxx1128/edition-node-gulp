@@ -2,11 +2,11 @@
     $Table
 \*------------------------------------*/
 
-$table-margin: spacing(half);
-$table-cell-spacing: spacing() 0;
-$table-border-bottom: container(border);
+$table-margin: plph-spacing(half);
+$table-cell-spacing: plph-spacing() 0;
+$table-border-bottom: plph-container(border);
 
-$table-header-font-weight: type(font-weight, bold);
+$table-header-font-weight: plph-type(font-weight, bold);
 
 table {
   border-collapse: collapse;

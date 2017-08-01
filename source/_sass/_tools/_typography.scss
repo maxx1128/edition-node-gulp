@@ -5,5 +5,5 @@
   $small-font-size: $base-font-size * 0.8;
   $large-font-size: $base-font-size * 1;
 
-  @include between(#{$prop}, $small-font-size, $large-font-size, breakpoint(sm), breakpoint(lg));
+  @include between(#{$prop}, $small-font-size, $large-font-size, plph-breakpoint(sm), plph-breakpoint(lg));
 }

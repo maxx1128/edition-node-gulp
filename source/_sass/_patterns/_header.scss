@@ -1,13 +1,13 @@
 .plph-p-header {
   @include clearfix();
-  margin-bottom: spacing();
+  margin-bottom: plph-spacing();
 
-  border-bottom: container(border, dark);
+  border-bottom: plph-container(border, dark);
 }
 
 .plph-p-header__container,
 .plph-p-header__logo,
-.plph-p-header__nav { @include row-container(); }
+.plph-p-header__nav { @include row-plph-container(); }
 
 .plph-p-header__logo {
   @include syn(base, 12, 0, (''));

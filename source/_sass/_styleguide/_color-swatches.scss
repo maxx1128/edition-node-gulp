@@ -6,30 +6,30 @@ $swatch-tone-height: 80px;
 
 // Mixin for generating the common swatch colors
 @mixin swatch__color-scheme-generator($u-color, $shade, $base: false) {
-  @include contra-color($u-color, color(mono, light), color(mono, dark));
+  @include contra-plph-color($u-color, plph-color(mono, light), plph-color(mono, dark));
   position: relative;
 
   text-transform: capitalize;
 
   @if ($base == true) {
-    font-size: type(font-size, h4);
+    font-size: plph-type(font-size, h4);
   } @else {
-    font-size: type(font-size, small);
+    font-size: plph-type(font-size, small);
   }
 
   &::before,
   &::after {
     position: absolute;
-    left: spacing(half);
+    left: plph-spacing(half);
   }
 
   &::before {
-    top: spacing(half);
+    top: plph-spacing(half);
     content: quote(inspect($shade));
   }
 
   &::after {
-    bottom: spacing(half);
+    bottom: plph-spacing(half);
     content: quote(inspect($u-color));
 
     text-transform: uppercase;

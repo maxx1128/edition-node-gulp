@@ -8,7 +8,7 @@
 // Any universal block styles for all variations
 @include bem-mods(c-block) {
   overflow: hidden;
-  margin-bottom: spacing(double);
+  margin-bottom: plph-spacing(double);
 }
 
 .plph-c-block__text {
@@ -29,7 +29,7 @@
   }
 
   eq_parent.plph-c-block__text {
-    padding: spacing(double) spacing(half);
+    padding: plph-spacing(double) plph-spacing(half);
     top: 0;
   }
 }
@@ -42,7 +42,7 @@
 .plph-c-block__excerpt {
   margin-bottom: 0;
 
-  color: color(mono, dark);
+  color: plph-color(mono, dark);
 }
 
 
@@ -86,9 +86,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: spacing(double) spacing();
+    padding: plph-spacing(double) plph-spacing();
 
-    color: color(mono, light);
+    color: plph-color(mono, light);
 
     background: rgba(0, 0, 0, 0.5);
   }
@@ -97,5 +97,5 @@
 // Hero Block specific styles
 .plph-c-block--hero {
 
-  .plph-c-block__text { padding: spacing(double) spacing(); }
+  .plph-c-block__text { padding: plph-spacing(double) plph-spacing(); }
 }

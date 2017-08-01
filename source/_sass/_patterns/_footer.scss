@@ -2,19 +2,19 @@
     $FOOTER
 \*------------------------------------*/
 .plph-p-footer {
-  padding-top: spacing();
+  padding-top: plph-spacing();
   
-  color: color(mono, light);
+  color: plph-color(mono, light);
 
-  background: color(primary, dark);
+  background: plph-color(primary, dark);
 
-  a { color: color(mono, light); }
+  a { color: plph-color(mono, light); }
 }
 
 .plph-p-footer__container,
 .plph-p-footer__links,
 .plph-p-footer__copyright {
-  @include row-container();
+  @include row-plph-container();
 }
 
 .plph-p-footer__links {

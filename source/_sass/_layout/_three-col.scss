@@ -2,9 +2,9 @@
 // .sidebar-layout__main for the content
 // .sidebar-layout__sidebar for the sidebar
 
-.plph-l-three-col { @include row-container(); }
+.plph-l-three-col { @include row-plph-container(); }
 
-.plph-l-three-col__item { @include col-container(); }
+.plph-l-three-col__item { @include col-plph-container(); }
 
 .plph-l-three-col__item {
   @include syn(medium, 4, 0, (inline-b float-l));

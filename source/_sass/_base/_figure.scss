@@ -1,15 +1,15 @@
 figure {
-  margin: 0 0 spacing() 0;
+  margin: 0 0 plph-spacing() 0;
 
   img {
     display: block;
-    margin: 0 auto spacing(half);
+    margin: 0 auto plph-spacing(half);
     max-width: none;
     width: 100%;
   }
 }
 
 figcaption {
-  font-size: type(font-size, small);
+  font-size: plph-type(font-size, small);
   font-style: italic;
 }

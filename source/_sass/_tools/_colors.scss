@@ -1,7 +1,7 @@
 // Mixins and functions related to controlling and adjusting colors
 
 // For making contrasting font colors with backgrounds
-@mixin contra-color($color, $light: color(mono, light), $dark: color(mono, dark)) {
+@mixin contra-plph-color($color, $light: plph-color(mono, light), $dark: plph-color(mono, dark)) {
 
   background-color: $color;
 

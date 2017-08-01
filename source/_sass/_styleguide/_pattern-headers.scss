@@ -14,30 +14,30 @@
 .sg-pattern-category-title,
 .sg-pattern-category-body {
   @include clearfix();
-  padding: spacing(half);
+  padding: plph-spacing(half);
 }
 
-.sg-pattern-category-body { padding: 0 spacing() spacing() spacing(); }
+.sg-pattern-category-body { padding: 0 plph-spacing() plph-spacing() plph-spacing(); }
 
 .sg-pattern-head {
-  padding: spacing() 0;
-  margin: 0 0 spacing(double) 0;
+  padding: plph-spacing() 0;
+  margin: 0 0 plph-spacing(double) 0;
 
-  font-family: type(font-family, header);
+  font-family: plph-type(font-family, header);
 
-  border-bottom: container(border);
+  border-bottom: plph-container(border);
 
-  .sg-pattern-title { font-size: type(font-size, h3) !important; }
+  .sg-pattern-title { font-size: plph-type(font-size, h3) !important; }
 
   a {
     display: block;
 
     cursor: pointer;
     text-decoration: none;
-    color: color(mono, dark);
+    color: plph-color(mono, dark);
 
     @include hovers() {
-      color: color(mono, dark);
+      color: plph-color(mono, dark);
     }
   }
 }

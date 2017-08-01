@@ -5,7 +5,7 @@ $type-properties: 'font-size', 'line-height', 'margin';
   #{$type} {
 
     @each $prop in $type-properties {
-      #{$prop}: type(#{$prop}, #{$type});
+      #{$prop}: plph-type(#{$prop}, #{$type});
     }
   }
 }
@@ -14,20 +14,20 @@ $type-properties: 'font-size', 'line-height', 'margin';
 
 // Default typography for all elements
 body {
-  font-family: type(font-family, base);
+  font-family: plph-type(font-family, base);
 
-  color: color(mono, dark);
+  color: plph-color(mono, dark);
 }
 
 
 // Links
 a {
-  color: color(action);
+  color: plph-color(action);
   text-decoration: none;
   outline: 0;
 
   @include hovers() {
-    color: color(action, dark);
+    color: plph-color(action, dark);
     text-decoration: underline;
   }
 }
@@ -38,25 +38,25 @@ h2,
 h3,
 h4,
 h5,
-h6 { font-family: type(font-family, header); }
+h6 { font-family: plph-type(font-family, header); }
 
 // Subheadings
 .subheading {
-  font-family: type(font-family, base);
-  font-weight: type(font-weight, bold);
+  font-family: plph-type(font-family, base);
+  font-weight: plph-type(font-weight, bold);
 }
 
 // Horizontal Rule
 hr {
   border: 0;
   height: 1px;
-  margin: spacing() 0;
+  margin: plph-spacing() 0;
 
-  background: color(primary, dark);
+  background: plph-color(primary, dark);
 }
 
 abbr {
-  border-bottom: container(border);
+  border-bottom: plph-container(border);
   cursor: help;
 }
 

@@ -1,29 +1,29 @@
-$social-share-bg: color(secondary, dark);
-$social-share-bg-hover: color(secondary, dark);
+$social-share-bg: plph-color(secondary, dark);
+$social-share-bg-hover: plph-color(secondary, dark);
 
 .plph-c-social-share {
   overflow: hidden;
-  margin: 0 0 spacing() 0;
+  margin: 0 0 plph-spacing() 0;
 
   list-style-type: none;
 }
 
 .plph-c-social-share__item {
   display: inline-block;
-  margin-right: spacing(half);
+  margin-right: plph-spacing(half);
 
   a {
-    transition: anim(time);
+    transition: plph-anim(time);
     display: block;
-    padding: spacing(half) spacing();
+    padding: plph-spacing(half) plph-spacing();
 
-    color: color(mono, light);
+    color: plph-color(mono, light);
 
-    border-radius: container(border-radius);
+    border-radius: plph-container(border-radius);
     background: $social-share-bg;
 
     @include hovers() {
-      transition: anim(time);
+      transition: plph-anim(time);
       text-decoration: none;
 
       background: $social-share-bg-hover;

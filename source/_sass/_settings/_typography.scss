@@ -49,27 +49,27 @@ $typography-map: (
     h4: decimal-round(modular-scale(4), 2),
     h5: decimal-round(modular-scale(3), 2),
     h6: decimal-round(modular-scale(3), 2),
-    p: decimal-round(modular-scale(2.5), 2),
+    p: decimal-round(modular-scale(2), 2),
     small: decimal-round(modular-scale(2), 2),
     tiny: decimal-round(modular-scale(2), 2)
   ),
 
   margin: (
-    h1: spacing() 0,
-    h2: spacing(half) 0,
-    h3: spacing(half) 0,
-    h4: spacing(half) 0,
-    h5: spacing(half) 0,
-    h6: spacing(half) 0,
-    p: 0 0 spacing(double) 0,
-    small: spacing(half) 0,
-    tiny: spacing(half) 0
+    h1: plph-spacing() 0,
+    h2: plph-spacing(half) 0,
+    h3: plph-spacing(half) 0,
+    h4: plph-spacing(half) 0,
+    h5: plph-spacing(half) 0,
+    h6: plph-spacing(half) 0,
+    p: 0 0 plph-spacing(double) 0,
+    small: plph-spacing(half) 0,
+    tiny: plph-spacing(half) 0
   )
 );
 
 // For pulling any typography values
 // No base is set so it always needs two values
-@function type($type-var, $val: 'base') {
+@function plph-type($type-var, $val: 'base') {
   @if map-has-key($typography-map, $type-var) {
     @return map-get(map-get($typography-map, $type-var), $val);
   }

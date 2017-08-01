@@ -2,10 +2,10 @@
 // .plph-l-sidebar__main for the content
 // .plph-l-sidebar__sidebar for the sidebar
 
-.plph-l-sidebar { @include row-container(); }
+.plph-l-sidebar { @include row-plph-container(); }
 
 .plph-l-sidebar__main,
-.plph-l-sidebar__sidebar { @include col-container(); }
+.plph-l-sidebar__sidebar { @include col-plph-container(); }
 
 .plph-l-sidebar__main {
   @include syn(medium, 8, 0, ('float-l'));

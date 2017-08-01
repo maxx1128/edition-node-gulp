@@ -5,13 +5,13 @@
 
   li {
     display: block;
-    padding-bottom: spacing();
+    padding-bottom: plph-spacing();
   }
 
   @include larger-than(medium) {
     li {
       display: inline-block;
-      padding-right: spacing(double);
+      padding-right: plph-spacing(double);
     }
   }
 }

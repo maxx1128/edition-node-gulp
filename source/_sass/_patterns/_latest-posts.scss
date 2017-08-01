@@ -1,13 +1,13 @@
 /* Post List */
 
 // Blocks of the most recent posts, with images
-.plph-p-latest-posts { margin-bottom: spacing(double); }
+.plph-p-latest-posts { margin-bottom: plph-spacing(double); }
 
 .plph-p-latest-posts__title { margin-top: 0; }
 
 // List of blocks for recent posts
 .plph-p-latest-posts__list {
-  margin: 0 0 spacing() 0;
+  margin: 0 0 plph-spacing() 0;
 
   list-style-type: none;
 }

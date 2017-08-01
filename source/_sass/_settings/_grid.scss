@@ -9,7 +9,7 @@ $breakpoint-map: (
 
 // For pulling specific breakpoint width values out.
 // Not for adding breakpoint styles.
-@function breakpoint($width) {
+@function plph-breakpoint($width) {
   @if map-has-key($breakpoint-map, $width) {
     @return map-get($breakpoint-map, $width);
   }

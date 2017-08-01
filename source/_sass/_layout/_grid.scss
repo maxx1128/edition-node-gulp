@@ -3,15 +3,15 @@ $synapse: (
   columns: 12,
   layouts: (
         base:  0,
-        small:  breakpoint('small'),
-        medium:  breakpoint('medium'),
-        large: breakpoint('large')
+        small:  plph-breakpoint('small'),
+        medium:  plph-breakpoint('medium'),
+        large: plph-breakpoint('large')
     ),
   spaceUnits: (
-    spacing(half),
-    spacing(),
-    spacing(double),
-    spacing(double) * 2
+    plph-spacing(half),
+    plph-spacing(),
+    plph-spacing(double),
+    plph-spacing(double) * 2
   )
 );
 
@@ -28,7 +28,7 @@ $synapse: (
 
 // For custom layouts, apply this to the row holding all the columns
 // And to the columns within the row
-@mixin row-container($padding: spacing(half)) {
+@mixin row-plph-container($padding: plph-spacing(half)) {
   @include clearfix();
   max-width: size(max-width);
   margin: 0 auto;
@@ -36,6 +36,6 @@ $synapse: (
   padding: $padding;
 }
 
-@mixin col-container() {
-  @include row-container(0 spacing(half));
+@mixin col-plph-container() {
+  @include row-plph-container(0 plph-spacing(half));
 }

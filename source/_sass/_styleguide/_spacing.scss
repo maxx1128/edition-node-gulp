@@ -1,7 +1,7 @@
 $b-spacing-height: 3em;
-$b-spacing-color: color(secondary);
+$b-spacing-color: plph-color(secondary);
 
-$b-spacing-example-font-size: type(font-size, small);
+$b-spacing-example-font-size: plph-type(font-size, small);
 
 .plph-b-spacing__container {
   @include clearfix();
@@ -28,7 +28,7 @@ $b-spacing-example-font-size: type(font-size, small);
 
     &:after {
       position: absolute;
-      top: spacing();
+      top: plph-spacing();
       left: calc(100% + 0.5em);
       content: quote(inspect($distance));
 

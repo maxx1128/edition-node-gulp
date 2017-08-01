@@ -25,14 +25,14 @@ $spacing-map: (
 
 // For pulling specific spacing values
 // Can be used for margins or padding
-@function spacing($space: 'base') {
+@function plph-spacing($space: 'base') {
   @if map-has-key($spacing-map, $space) {
     @return map-get($spacing-map, $space);
   }
 }
 
 // For pulling z-index values
-@function z-index($index: 'base') {
+@function plph-z-index($index: 'base') {
   @if map-has-key($z-layers, $index) {
     @return map-get($z-layers, $index);
   }

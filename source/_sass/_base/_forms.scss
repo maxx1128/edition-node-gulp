@@ -2,7 +2,7 @@
     $FORMS
 \*------------------------------------*/
 form {
-  & > div { margin-bottom: spacing(); }
+  & > div { margin-bottom: plph-spacing(); }
 
   ul,
   ol {
@@ -18,24 +18,24 @@ fieldset {
   border: 0;
 }
 
-.form__container { margin-bottom: spacing(double); }
+.form__container { margin-bottom: plph-spacing(double); }
 
-.form__legend { margin-bottom: spacing(half); }
+.form__legend { margin-bottom: plph-spacing(half); }
 
 .form__label {
   display: block;
-  padding-bottom: spacing(half);
+  padding-bottom: plph-spacing(half);
 }
 
 .form__input {
   width: 100%;
   margin: 0;
-  padding: spacing(half);
+  padding: plph-spacing(half);
 
   font-size: 100%;
   font-family: inherit;
 
-  border-color: color(mono, dark);
+  border-color: plph-color(mono, dark);
 }
 
 
@@ -47,5 +47,5 @@ fieldset {
 .form__input--checkbox,
 .form__input--radio {
   width: auto;
-  margin-right: spacing(half);
+  margin-right: plph-spacing(half);
 }

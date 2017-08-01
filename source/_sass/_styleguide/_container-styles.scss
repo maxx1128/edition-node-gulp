@@ -1,13 +1,13 @@
 $cont-item-bg: #eee;
 $cont-item-width: 85%;
 $cont-item-minheight: 100px;
-$cont-item-marg-bottom: spacing(double);
+$cont-item-marg-bottom: plph-spacing(double);
 
 .container-el {
   @include clearfix();
   width: 100%;
   height: 100%;
-  margin-bottom: spacing();
+  margin-bottom: plph-spacing();
 }
 
 .container-el__title {
@@ -45,7 +45,7 @@ $cont-item-marg-bottom: spacing(double);
 
           &::after {
             position: absolute;
-            top: $value + spacing(half);
+            top: $value + plph-spacing(half);
           }
 
           &::before {
@@ -54,15 +54,15 @@ $cont-item-marg-bottom: spacing(double);
             content: '';
             display: block;
 
-            background-color: color(primary, light);
+            background-color: plph-color(primary, light);
           }
 
         } @else {
 
           &::after {
             position: absolute;
-            top: spacing();
-            left: spacing();
+            top: plph-spacing();
+            left: plph-spacing();
           }
         }
       }

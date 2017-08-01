@@ -1,5 +1,5 @@
 // For any elements in their own row that still need a max width and proper alignment, use this
 // Make sure it has twice the padding as the above col mixin
 .plph-l-col__single {
-  @include row-container(spacing(half) spacing());
+  @include row-plph-container(plph-spacing(half) plph-spacing());
 }

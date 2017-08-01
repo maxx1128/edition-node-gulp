@@ -4,7 +4,7 @@
 $g-primary-color: #e6a4d5;
 $g-secondary-color: #4a73b4;
 $g-action-color: #c52052;
-@function color($color, $tone: 'base') {
+@function plph-color($color, $tone: 'base') {
   @if map-has-key($color-map, $color) {
     @return map-get(map-get($color-map, $color), $tone);
   }
@@ -47,7 +47,7 @@ $color-map: (
 );
 
 // Color Map function
-@function color($color, $tone: 'base') {
+@function plph-color($color, $tone: 'base') {
   @if map-has-key($color-map, $color) {
     @return map-get(map-get($color-map, $color), $tone);
   }

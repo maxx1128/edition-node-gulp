@@ -1,29 +1,29 @@
-$btn-bg: color(action);
-$btn-text: color(mono, light);
-$btn-pad: spacing();
-$btn-radius: container(border-radius, large);
-$btn-hover-bg: color(action, dark);
+$btn-bg: plph-color(action);
+$btn-text: plph-color(mono, light);
+$btn-pad: plph-spacing();
+$btn-radius: plph-container(border-radius, large);
+$btn-hover-bg: plph-color(action, dark);
 $btn-hover-text: $btn-text;
-$btn-trans: anim(time);
+$btn-trans: plph-anim(time);
 
-$btn-alt-bg: color(mono, light);
-$btn-alt-border: 2px solid color(action);
-$btn-alt-text: color(action);
-$btn-alt-hover-bg: color(action);
+$btn-alt-bg: plph-color(mono, light);
+$btn-alt-border: 2px solid plph-color(action);
+$btn-alt-text: plph-color(action);
+$btn-alt-hover-bg: plph-color(action);
 $btn-alt-hover-border: $btn-alt-border;
-$btn-alt-hover-text: color(mono, light);
+$btn-alt-hover-text: plph-color(mono, light);
 
-$btn-small-pad: spacing();
-$btn-small-font: type(font-size, tiny);
-$btn-large-pad: spacing();
-$btn-large-font: type(font-size, h5);
+$btn-small-pad: plph-spacing();
+$btn-small-font: plph-type(font-size, tiny);
+$btn-large-pad: plph-spacing();
+$btn-large-font: plph-type(font-size, h5);
 
-$btn-disabled-bg: color(mono);
-$btn-disabled-text: color(mono, light);
+$btn-disabled-bg: plph-color(mono);
+$btn-disabled-text: plph-color(mono, light);
 $btn-disabled-opacity: .35;
 
 .btn {
-  transition: anim(time);
+  transition: plph-anim(time);
   display: inline-block;
   padding: $btn-pad;
 

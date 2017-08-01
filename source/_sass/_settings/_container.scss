@@ -1,0 +1,30 @@
+// ----- Container Variables ----- //
+
+$containers-map: (
+  border: (
+    base: 2px solid color(primary),
+    dark: 2px solid color(primary, dark)
+  ),
+
+  border-radius: (
+    base: spacing(half),
+    large: spacing()
+  ),
+
+  box-shadow: (
+    base: 0 0 spacing() color(mono, dark)
+  ),
+
+  background-color: (
+    light: color(mono, light),
+    base: color(primary),
+    dark: color(primary, dark)
+  )
+);
+
+// For getting container-specific styles
+@function container($style, $type: 'base') {
+  @if map-has-key($containers-map, $style) {
+    @return map-get(map-get($containers-map, $style), $type);
+  }
+}

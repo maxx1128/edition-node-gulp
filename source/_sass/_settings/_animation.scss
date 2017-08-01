@@ -1,0 +1,14 @@
+// ----- Animation Variables ----- //
+
+$animations-map: (
+  time: (
+    base: 0.5s
+  )
+);
+
+// For getting values related to animations
+@function anim($anim, $type: 'base') {
+  @if map-has-key($animations-map, $anim) {
+    @return map-get(map-get($animations-map, $anim), $type);
+  }
+}

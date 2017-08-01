@@ -1,18 +1,23 @@
 @import
-'_bower_components/bourbon/app/assets/stylesheets/bourbon',
 '_bower_components/Synapse-Grid/synapse-grid';
 
 @import
-'utils/map-functions',
-'utils/functions',
-'utils/vars',
-'utils/mixins',
-'utils/helpers';
+'_settings/animation',
+'_settings/colors',
+'_settings/grid',
+'_settings/layout',
+'_settings/typography',
+'_settings/container';
 
 @import
-'styleguide/type-table',
-'styleguide/color-swatches',
-'styleguide/pattern-headers',
-'styleguide/container-styles',
-'styleguide/spacing',
-'styleguide/inline-annotation';
+'_tools/functions',
+'_tools/mixins',
+'_tools/helpers';
+
+@import
+'_styleguide/type-table',
+'_styleguide/color-swatches',
+'_styleguide/pattern-headers',
+'_styleguide/container-styles',
+'_styleguide/spacing',
+'_styleguide/inline-annotation';

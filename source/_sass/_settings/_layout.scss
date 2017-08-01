@@ -1,0 +1,40 @@
+@import
+'../_tools/functions';
+
+// ----- Layout Variables ----- //
+
+// Lays out the different z-index values to help keep them organized. Based off what commom elements they'd be used for.
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);
+
+$g-base-spacing: rem(16px);
+
+// Spacing units for padding, margin, etc
+$spacing-map: (
+  double: decimal-round(($g-base-spacing * 2), 2),
+
+  base: decimal-round($g-base-spacing, 2),
+
+  half: decimal-round(($g-base-spacing / 2), 2)
+);
+
+// For pulling specific spacing values
+// Can be used for margins or padding
+@function spacing($space: 'base') {
+  @if map-has-key($spacing-map, $space) {
+    @return map-get($spacing-map, $space);
+  }
+}
+
+// For pulling z-index values
+@function z-index($index: 'base') {
+  @if map-has-key($z-layers, $index) {
+    @return map-get($z-layers, $index);
+  }
+}
+

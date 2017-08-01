@@ -1,0 +1,54 @@
+// ----- Color Variables ----- //
+
+// Espeon Palette
+$g-primary-color: #e6a4d5;
+$g-secondary-color: #4a73b4;
+$g-action-color: #c52052;
+@function color($color, $tone: 'base') {
+  @if map-has-key($color-map, $color) {
+    @return map-get(map-get($color-map, $color), $tone);
+  }
+}
+$g-mono-color: #c5c5c5;
+
+$g-shade-1: 30%;
+
+/* 
+If you want to automatically create the lighter and darker shades:
+  - tint($g-primary-color, $g-shade-1)
+  - shade($g-primary-color, $g-shade-1)
+*/
+
+// Map for storing all color variables
+$color-map: (
+  primary: (
+    light: #eebdee,
+    base: $g-primary-color,
+    dark: #7b4a7b
+  ),
+
+  secondary: (
+    light: tint($g-secondary-color, $g-shade-1),
+    base: $g-secondary-color,
+    dark: #314173
+  ),
+
+  action: (
+    light: tint($g-action-color, $g-shade-1),
+    base: $g-action-color,
+    dark: #8b2052
+  ),
+
+  mono: (
+    light: #fff,
+    base: $g-mono-color,
+    dark: #080401
+  )
+);
+
+// Color Map function
+@function color($color, $tone: 'base') {
+  @if map-has-key($color-map, $color) {
+    @return map-get(map-get($color-map, $color), $tone);
+  }
+}

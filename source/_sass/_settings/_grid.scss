@@ -1,0 +1,16 @@
+// ----- Grid Variables ----- //
+
+$breakpoint-map: (
+  small: em(480px),
+  medium: em(787px),
+  large: em(900px),
+  max-width: em(1200px)
+);
+
+// For pulling specific breakpoint width values out.
+// Not for adding breakpoint styles.
+@function breakpoint($width) {
+  @if map-has-key($breakpoint-map, $width) {
+    @return map-get($breakpoint-map, $width);
+  }
+}

@@ -8,7 +8,7 @@
       "annotations" : "./source/_annotations/",
       "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
-      "js" : "./source/js",
+      "js" : "./source/js/source/_js",
       "js_pre" : "./source/_js",
       "images" : "./source/images",
       "fonts" : "./source/fonts",

@@ -1,37 +1,31 @@
+'use strict';
+
+let
+  $ = require('jquery'),
+  f = require('../functions/basic')
+;
 
 // Containerization for the primary nav
-function primaryNav($, patternId) {
+function primaryNav(patternId) {
 
-  var pattern;
+  let
+    pattern = $("#" + patternId)
+  ;
 
-
-  function init() {
-    pattern.attr('jr-init');
-  }
-
+  function init() {}
 
   function setEvents() {}
 
-
   function docReady() {
-    pattern = $("#" + patternId);
     init();
     setEvents();
   }
 
-
-  return docReady;
+  $(document).on({
+    ready: docReady()
+  });
 }
 
-
-var PRIMARYNAV = {
-  "init":function(){
-    // Change ID selecter here!
-    $('.plph-c-primaryNav:not([jr-init])').each(function(){
-      var id = 'UNIQUEID_' + Math.floor((Math.random() * 999999999) + 1);
-      $(this).attr('id', id);
-      
-      primaryNav(jQuery,id)();
-    });
-  }
+exports.activate = function(selector) {
+  f.component_init(selector, primaryNav);
 }

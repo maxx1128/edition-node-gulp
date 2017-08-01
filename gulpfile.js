@@ -17,7 +17,18 @@ var
   notify       = require('gulp-notify'),
   rename       = require('gulp-rename'),
   sass         = require('gulp-sass'),
-  sourcemaps   = require('gulp-sourcemaps');
+  sourcemaps   = require('gulp-sourcemaps'),
+
+  fs           = require('fs'),
+  del          = require('del'),
+  babelify     = require('babelify'),
+  browserSync  = require('browser-sync'),
+  runSequence  = require('run-sequence'),
+  browserify   = require('browserify'),
+  source       = require('vinyl-source-stream'),
+  buffer       = require('vinyl-buffer'),
+  glob         = require('glob'),
+  es           = require('event-stream');
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -57,7 +68,7 @@ function customPlumber(errTitle) {
 ******************************************************/
 // JS copy
 gulp.task('pl-copy:js', function () {
-  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+  return gulp.src('main-**.js', {cwd: normalizePath(paths().source.js)} )
     .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
 
@@ -232,9 +243,9 @@ function watch() {
     },
     {
       name: 'JS Files',
-      paths: [normalizePath(paths().source.js_pre, '**/**/*.js')],
+      paths: [normalizePath(paths().source.js_pre, '**/**/**/*.js')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('pl-js', 'pl-copy:js', reload)
+      tasks: gulp.series('browserify', 'pl-copy:js', reload)
     },
     {
       name: 'Source Files',
@@ -349,15 +360,23 @@ gulp.task('pl-sass', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('pl-js', function () {
+gulp.task('browserify', function(done) {
+  glob('source/_js/main-**.js', function(err, files) {
+    if(err) done(err);
 
-  return gulp
-    .src('source/_js/main.js')
-    .pipe(customPlumber('Error running Include'))
-    .pipe(include())
-    .pipe(gulp.dest('source/js'))
-    .pipe(notify({ message: 'Javascript Processed!', onLast: true }))
-    .pipe(browserSync.stream());
+    var tasks = files.map(function(entry) {
+      return browserify({
+          entries: [entry],
+          outputStyle: 'compressed'
+        })
+        .transform("babelify", {presets: ["es2015"]})
+        .bundle()
+        .pipe(source(entry))
+        .pipe(gulp.dest('source/js'))
+        .pipe(browserSync.stream());
+      });
+    es.merge(tasks).on('end', done);
+  })
 });
 
 
@@ -377,4 +396,4 @@ gulp.task('pl-js', function () {
 gulp.task('default', gulp.series('patternlab:build'));
 // gulp.task('deploy', gulp.series('patternlab:build', 'pages'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
-gulp.task('patternlab:serve', gulp.series('sass', 'pl-sass', 'pl-js', 'patternlab:build', 'patternlab:connect', watch));
+gulp.task('patternlab:serve', gulp.series('sass', 'pl-sass', 'browserify', 'patternlab:build', 'patternlab:connect', watch));

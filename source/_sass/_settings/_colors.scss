@@ -4,11 +4,6 @@
 $g-primary-color: #e6a4d5;
 $g-secondary-color: #4a73b4;
 $g-action-color: #c52052;
-@function plph-color($color, $tone: 'base') {
-  @if map-has-key($color-map, $color) {
-    @return map-get(map-get($color-map, $color), $tone);
-  }
-}
 $g-mono-color: #c5c5c5;
 
 $g-shade-1: 30%;
